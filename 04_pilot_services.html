@@ -1,0 +1,67 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: #0a1628; border-bottom: 1px solid rgba(200,170,90,0.3); }
+.nav-logo { color: #c8aa5a; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.nav-tagline { color: rgba(200,170,90,0.6); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: rgba(255,255,255,0.7); font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; }
+.nav-links a.active { color: #c8aa5a; }
+.hero { background: #0a1628; padding: 72px 32px 64px; text-align: center; }
+.hero-eyebrow { color: #c8aa5a; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+.hero-headline { color: #ffffff; font-size: 44px; font-weight: 700; margin-bottom: 14px; }
+.hero-sub { color: rgba(255,255,255,0.55); font-size: 15px; max-width: 520px; margin: 0 auto 36px; line-height: 1.7; }
+.btn-gold { background: #c8aa5a; color: #0a1628; padding: 14px 32px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 2px; margin-right: 12px; }
+.btn-outline { background: transparent; color: #c8aa5a; padding: 14px 32px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid rgba(200,170,90,0.5); border-radius: 2px; }
+.profile { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e8e4dc; }
+.profile-left { padding: 48px 40px; border-right: 1px solid #e8e4dc; background: white; }
+.profile-right { padding: 48px 40px; background: #f8f6f1; }
+.section-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 8px; }
+.section-title { font-size: 20px; font-weight: 700; color: #0a1628; margin-bottom: 16px; }
+.section-body { font-size: 13px; color: #666; line-height: 1.8; }
+.section-body p { margin-bottom: 14px; }
+.qual-list { list-style: none; }
+.qual-item { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #e8e4dc; }
+.qual-item:last-child { border-bottom: none; }
+.qual-dot { width: 6px; height: 6px; border-radius: 50%; background: #c8aa5a; margin-top: 6px; flex-shrink: 0; }
+.qual-text { font-size: 13px; color: #0a1628; font-weight: 700; }
+.qual-sub { font-size: 12px; color: #888; margin-top: 2px; }
+.services { padding: 48px 32px; background: white; border-bottom: 1px solid #e8e4dc; }
+.services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+.service-card { background: #f8f6f1; border: 1px solid #e8e4dc; border-radius: 2px; padding: 28px 22px; }
+.service-num { font-size: 11px; color: #c8aa5a; letter-spacing: 1.5px; margin-bottom: 10px; }
+.service-name { font-size: 16px; font-weight: 700; color: #0a1628; margin-bottom: 10px; }
+.service-desc { font-size: 13px; color: #666; line-height: 1.7; }
+.consulting { padding: 48px 32px; background: #f8f6f1; border-bottom: 1px solid #e8e4dc; }
+.consulting-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; margin-bottom: 24px; }
+.consult-card { background: white; border: 1px solid rgba(200,170,90,0.4); border-radius: 2px; padding: 28px 24px; }
+.consult-type { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 8px; }
+.consult-title { font-size: 17px; font-weight: 700; color: #0a1628; margin-bottom: 12px; }
+.consult-desc { font-size: 13px; color: #666; line-height: 1.7; margin-bottom: 16px; }
+.consult-includes { list-style: none; }
+.consult-includes li { font-size: 12px; color: #666; padding: 5px 0; border-bottom: 1px solid #e8e4dc; display: flex; gap: 8px; }
+.consult-includes li:last-child { border-bottom: none; }
+.consult-includes li::before { content: '·'; color: #c8aa5a; font-weight: 700; }
+.consult-note { font-size: 13px; color: #666; line-height: 1.7; padding: 20px 24px; background: white; border: 1px solid #e8e4dc; border-left: 3px solid #c8aa5a; border-radius: 2px; }
+.safety { padding: 48px 32px; background: #0a1628; border-bottom: 1px solid rgba(200,170,90,0.2); }
+.safety-title { font-size: 22px; font-weight: 700; color: white; margin-bottom: 16px; }
+.safety-body { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.8; max-width: 640px; margin-bottom: 32px; }
+.safety-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+.safety-tag { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #c8aa5a; background: rgba(200,170,90,0.1); border: 1px solid rgba(200,170,90,0.3); padding: 6px 14px; border-radius: 2px; }
+.cta-section { background: #f8f6f1; padding: 64px 32px; text-align: center; }
+.cta-title { font-size: 32px; font-weight: 700; color: #0a1628; margin-bottom: 12px; }
+.cta-sub { color: #666; font-size: 14px; margin-bottom: 36px; }
+.form-wrap { background: white; border: 1px solid #e8e4dc; border-radius: 2px; padding: 36px 32px; max-width: 600px; margin: 0 auto; text-align: left; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-full { grid-column: 1 / -1; }
+.field-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #888; display: block; margin-bottom: 6px; }
+.form-input { background: #f8f6f1; border: 1px solid #ddd; color: #333; padding: 10px 14px; font-size: 13px; border-radius: 2px; width: 100%; }
+.btn-primary { background: #c8aa5a; color: #0a1628; padding: 12px 36px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 2px; margin-top: 20px; width: 100%; }
+</style></head><body>
+<div class="nav"><div><div class="nav-logo">Volare Travel Services</div><div class="nav-tagline">Where luxury travel takes flight</div></div><div class="nav-links"><a href="#">Home</a><a href="#">Travel</a><a href="#">Charter</a><a href="#" class="active">Pilot Services</a><a href="#">About</a><a href="#">Contact</a></div></div>
+<div class="hero"><div class="hero-eyebrow">Contract Pilot, Crew & Consulting</div><div class="hero-headline">Professional. Typed.<br>Ready to Advise.</div><div class="hero-sub">Connor is available to select operators as a contract pilot and advisor — bringing Part 135 captain experience and safety committee depth to every engagement.</div><button class="btn-gold">Inquire About Availability</button><button class="btn-outline">View Qualifications</button></div>
+<div class="profile"><div class="profile-left"><div class="section-label">The Pilot</div><div class="section-title">Large-cabin experience at the highest level</div><div class="section-body"><p>Connor flies the Bombardier Global XRS internationally for Solairus Aviation under Part 135 — one of the most demanding positions in business aviation.</p><p>On days off, Connor is available to select operators who need a typed, experienced, safety-minded captain or first officer for contract assignments.</p><p>His work on Solairus's safety committee — combined with his NBAA CAM candidacy — means he brings a management-level perspective beyond the flight deck.</p></div></div><div class="profile-right"><div class="section-label">Qualifications</div><div class="section-title">What Connor brings</div><ul class="qual-list"><li class="qual-item"><div class="qual-dot"></div><div><div class="qual-text">Bombardier Global XRS</div><div class="qual-sub">Ultra-long-range large-cabin · International</div></div></li><li class="qual-item"><div class="qual-dot"></div><div><div class="qual-text">Part 135 Captain</div><div class="qual-sub">Solairus Aviation · On-demand charter</div></div></li><li class="qual-item"><div class="qual-dot"></div><div><div class="qual-text">Safety Committee Member</div><div class="qual-sub">SMS oversight · Risk management</div></div></li><li class="qual-item"><div class="qual-dot"></div><div><div class="qual-text">NBAA CAM Candidate</div><div class="qual-sub">Certified Aviation Manager</div></div></li><li class="qual-item"><div class="qual-dot"></div><div><div class="qual-text">Everglades University</div><div class="qual-sub">BS Aviation & Aerospace — Flight Operations</div></div></li><li class="qual-item"><div class="qual-dot"></div><div><div class="qual-text">Marquis Who's Who in America</div><div class="qual-sub">Recognized among most accomplished professionals</div></div></li></ul></div></div>
+<div class="services"><div class="section-label">Contract Flying</div><div class="section-title">Crew services offered</div><div class="services-grid"><div class="service-card"><div class="service-num">01</div><div class="service-name">Contract Captain</div><div class="service-desc">Available as pilot-in-command for select operators on large-cabin business jets.</div></div><div class="service-card"><div class="service-num">02</div><div class="service-name">First Officer Coverage</div><div class="service-desc">Available as SIC when operators need experienced crew coverage.</div></div><div class="service-card"><div class="service-num">03</div><div class="service-name">Trip Support & Coordination</div><div class="service-desc">Operational support for complex international trips — routing, permits, crew coordination.</div></div><div class="service-card"><div class="service-num">04</div><div class="service-name">Crew Placement</div><div class="service-desc">Leverage Connor's network within the business aviation community at Dallas Love Field.</div></div></div></div>
+<div class="consulting"><div class="section-label">Aviation Consulting</div><div class="section-title">Advisory services for operators & flight departments</div><div class="consulting-grid"><div class="consult-card"><div class="consult-type">Safety & Operations</div><div class="consult-title">Safety & SMS Consulting</div><div class="consult-desc">Drawing on his safety committee role and NBAA CAM candidacy, Connor advises operators on building genuine safety culture.</div><ul class="consult-includes"><li>SMS program review & development</li><li>Risk assessment frameworks</li><li>Operational policy review</li><li>Part 135 compliance guidance</li></ul></div><div class="consult-card"><div class="consult-type">Charter & Flight Department</div><div class="consult-title">Charter & Flight Department Advisory</div><div class="consult-desc">Helping companies evaluate, set up, or optimize their aviation program from operator selection to cost benchmarking.</div><ul class="consult-includes"><li>Charter operator vetting & selection</li><li>Flight department setup & structure</li><li>Own vs. charter cost analysis</li><li>Aircraft selection guidance</li></ul></div></div><div class="consult-note">Connor takes on a limited number of consulting engagements annually. All projects are handled personally — not delegated.</div></div>
+<div class="safety"><div class="section-label">The Standard</div><div class="safety-title">The standard doesn't change based on who's signing the check.</div><div class="safety-body">Every contract flight and consulting engagement gets the same preparation, professionalism, and risk awareness as Connor's full-time role.</div><div class="safety-tags"><span class="safety-tag">SMS Trained</span><span class="safety-tag">Part 135 Standards</span><span class="safety-tag">CRM Proficient</span><span class="safety-tag">International Ops</span><span class="safety-tag">Long-range Typed</span><span class="safety-tag">NBAA CAM Candidate</span></div></div>
+<div class="cta-section"><div class="cta-title">Inquire about availability</div><div class="cta-sub">Contract flying, crew placement, or consulting — Connor reviews all inquiries personally.</div><div class="form-wrap"><div class="form-grid"><div><label class="field-label">Your name</label><input class="form-input" placeholder="Name"/></div><div><label class="field-label">Email address</label><input class="form-input" placeholder="Email"/></div><div><label class="field-label">Company / Operator</label><input class="form-input" placeholder="Operator name"/></div><div><label class="field-label">Phone number</label><input class="form-input" placeholder="Phone"/></div><div><label class="field-label">Service needed</label><input class="form-input" placeholder="Contract pilot / Consulting / Crew placement"/></div><div><label class="field-label">Aircraft type</label><input class="form-input" placeholder="e.g. Bombardier Global"/></div><div class="form-full"><label class="field-label">Details</label><textarea class="form-input" rows="3" placeholder="Tell Connor about the operation, dates, scope..."></textarea></div><div class="form-full"><button class="btn-primary">Send Inquiry</button></div></div></div></div>
+</body></html>

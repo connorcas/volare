@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: #0a1628; border-bottom: 0.5px solid rgba(200,170,90,0.3); }
+.nav-logo { color: #c8aa5a; font-size: 15px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+.nav-tagline { color: rgba(200,170,90,0.6); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: rgba(255,255,255,0.7); font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; }
+.nav-links a.active { color: #c8aa5a; }
+.hero { background: #0a1628; padding: 72px 32px 64px; text-align: center; border-bottom: 0.5px solid rgba(200,170,90,0.2); }
+.hero-eyebrow { color: #c8aa5a; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+.hero-headline { color: #ffffff; font-size: 44px; font-weight: 500; margin-bottom: 14px; }
+.hero-sub { color: rgba(255,255,255,0.55); font-size: 15px; line-height: 1.7; max-width: 480px; margin: 0 auto; }
+.contact-body { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 0.5px solid #ddd; }
+.contact-info { padding: 56px 48px; background: #f8f8f8; border-right: 0.5px solid #ddd; }
+.section-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 8px; }
+.section-title { font-size: 22px; font-weight: 500; color: #111; margin-bottom: 32px; }
+.info-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 28px; }
+.info-dot { width: 8px; height: 8px; border-radius: 50%; background: #c8aa5a; margin-top: 5px; flex-shrink: 0; }
+.info-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 4px; }
+.info-value { font-size: 14px; color: #111; font-weight: 500; }
+.info-sub { font-size: 12px; color: #888; margin-top: 2px; }
+.divider { border: none; border-top: 0.5px solid #ddd; margin: 32px 0; }
+.social-row { display: flex; gap: 12px; margin-top: 8px; }
+.social-tag { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #c8aa5a; background: rgba(200,170,90,0.08); border: 0.5px solid rgba(200,170,90,0.3); padding: 5px 12px; border-radius: 2px; }
+.contact-form { padding: 56px 48px; background: white; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.form-full { grid-column: 1 / -1; }
+.field-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #888; display: block; margin-bottom: 6px; }
+.form-input { background: #f8f8f8; border: 0.5px solid #ccc; color: #333; padding: 10px 14px; font-size: 13px; border-radius: 2px; width: 100%; font-family: Arial, sans-serif; }
+.form-select { background: #f8f8f8; border: 0.5px solid #ccc; color: #333; padding: 10px 14px; font-size: 13px; border-radius: 2px; width: 100%; font-family: Arial, sans-serif; }
+.submit-btn { background: #c8aa5a; color: #0a1628; padding: 12px 36px; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; margin-top: 20px; width: 100%; }
+.form-note { font-size: 11px; color: #aaa; text-align: center; margin-top: 12px; }
+.footer { background: #0a1628; padding: 32px; display: flex; justify-content: space-between; align-items: center; border-top: 0.5px solid rgba(200,170,90,0.2); }
+.footer-logo { color: #c8aa5a; font-size: 13px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
+.footer-tagline { color: rgba(200,170,90,0.5); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
+.footer-contact { text-align: right; color: rgba(255,255,255,0.5); font-size: 12px; line-height: 1.8; }
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div>
+    <div class="nav-logo">Volare Travel Services</div>
+    <div class="nav-tagline">Where luxury travel takes flight</div>
+  </div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">Travel</a>
+    <a href="#">Charter</a>
+    <a href="#">Pilot Services</a>
+    <a href="#">About</a>
+    <a href="#" class="active">Contact</a>
+  </div>
+</div>
+
+<div class="hero">
+  <div class="hero-eyebrow">Get in touch</div>
+  <div class="hero-headline">Let's Talk.</div>
+  <div class="hero-sub">Whether you're planning a trip, chartering a jet, or inquiring about pilot services — Connor reviews every message personally.</div>
+</div>
+
+<div class="contact-body">
+  <div class="contact-info">
+    <div class="section-label">Contact information</div>
+    <div class="section-title">Reach Connor directly</div>
+
+    <div class="info-item">
+      <div class="info-dot"></div>
+      <div>
+        <div class="info-label">Email</div>
+        <div class="info-value">connor.casarella@volareavi.com</div>
+        <div class="info-sub">Typically responds within 1–2 business hours</div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-dot"></div>
+      <div>
+        <div class="info-label">Phone</div>
+        <div class="info-value">(860) 919-3322</div>
+        <div class="info-sub">Available during business hours CT</div>
+      </div>
+    </div>
+
+    <div class="info-item">
+      <div class="info-dot"></div>
+      <div>
+        <div class="info-label">Based at</div>
+        <div class="info-value">Dallas Love Field</div>
+        <div class="info-sub">Dallas, Texas · DAL</div>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section-label">Follow Volare</div>
+    <div class="social-row">
+      <span class="social-tag">Instagram</span>
+      <span class="social-tag">LinkedIn</span>
+      <span class="social-tag">Facebook</span>
+    </div>
+  </div>
+
+  <div class="contact-form">
+    <div class="section-label">Send a message</div>
+    <div class="section-title">How can Connor help?</div>
+    <div class="form-grid">
+      <div>
+        <label class="field-label">Your name</label>
+        <input class="form-input" placeholder="Name" />
+      </div>
+      <div>
+        <label class="field-label">Email address</label>
+        <input class="form-input" placeholder="your@email.com" />
+      </div>
+      <div class="form-full">
+        <label class="field-label">Subject</label>
+        <select class="form-select">
+          <option>Travel Inquiry</option>
+          <option>Charter Quote</option>
+          <option>Pilot Services</option>
+          <option>Consulting</option>
+          <option>General</option>
+        </select>
+      </div>
+      <div class="form-full">
+        <label class="field-label">Message</label>
+        <textarea class="form-input" rows="6" placeholder="Tell Connor what you have in mind..."></textarea>
+      </div>
+      <div class="form-full">
+        <button class="submit-btn">Send Message</button>
+        <div class="form-note">Connor reviews all messages personally</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div>
+    <div class="footer-logo">Volare Travel Services</div>
+    <div class="footer-tagline">Where luxury travel takes flight</div>
+  </div>
+  <div class="footer-contact">
+    connor.casarella@volareavi.com<br>
+    (860) 919-3322 · Dallas Love Field, TX
+  </div>
+</div>
+
+</body>
+</html>

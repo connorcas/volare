@@ -1,0 +1,57 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><style>
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; background: #0a1628; border-bottom: 1px solid rgba(200,170,90,0.3); }
+.nav-logo { color: #c8aa5a; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.nav-tagline { color: rgba(200,170,90,0.6); font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { color: rgba(255,255,255,0.7); font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; text-decoration: none; }
+.nav-links a.active { color: #c8aa5a; }
+.hero { background: #0a1628; padding: 72px 32px 64px; display: grid; grid-template-columns: 1fr 260px; gap: 64px; align-items: center; border-bottom: 1px solid rgba(200,170,90,0.2); }
+.hero-eyebrow { color: #c8aa5a; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+.hero-headline { color: #ffffff; font-size: 44px; font-weight: 700; margin-bottom: 20px; line-height: 1.15; }
+.hero-sub { color: rgba(255,255,255,0.55); font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
+.btn-gold { background: #c8aa5a; color: #0a1628; padding: 12px 28px; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 2px; }
+.photo-frame { background: rgba(200,170,90,0.08); border: 1px solid rgba(200,170,90,0.25); border-radius: 2px; aspect-ratio: 3/4; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: 300px; }
+.photo-initials { width: 72px; height: 72px; border-radius: 50%; background: rgba(200,170,90,0.15); border: 1px solid rgba(200,170,90,0.4); display: flex; align-items: center; justify-content: center; color: #c8aa5a; font-size: 22px; font-weight: 700; }
+.photo-name { color: rgba(255,255,255,0.6); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; }
+.photo-title { color: rgba(200,170,90,0.5); font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.whos-who { display: inline-flex; align-items: center; gap: 6px; background: rgba(200,170,90,0.12); border: 1px solid rgba(200,170,90,0.35); padding: 5px 12px; border-radius: 2px; }
+.whos-who-dot { width: 5px; height: 5px; border-radius: 50%; background: #c8aa5a; }
+.whos-who-text { color: #c8aa5a; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; }
+.diff { padding: 56px 32px; border-bottom: 1px solid #e8e4dc; background: white; }
+.diff-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 8px; }
+.diff-quote { font-size: 20px; font-weight: 700; color: #0a1628; line-height: 1.6; max-width: 680px; margin-bottom: 16px; border-left: 3px solid #c8aa5a; padding-left: 24px; }
+.diff-sub { font-size: 14px; color: #666; line-height: 1.7; max-width: 560px; padding-left: 27px; }
+.story { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e8e4dc; }
+.story-left { padding: 48px 40px; border-right: 1px solid #e8e4dc; background: white; }
+.story-right { padding: 48px 40px; background: #f8f6f1; }
+.section-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 8px; }
+.section-title { font-size: 20px; font-weight: 700; color: #0a1628; margin-bottom: 16px; }
+.section-body { font-size: 13px; color: #666; line-height: 1.8; }
+.section-body p { margin-bottom: 14px; }
+.credentials { padding: 48px 32px; background: #f8f6f1; border-bottom: 1px solid #e8e4dc; }
+.cred-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 28px; }
+.cred-card { background: white; border: 1px solid #e8e4dc; border-radius: 2px; padding: 24px 20px; }
+.cred-card.featured { border-color: rgba(200,170,90,0.4); background: rgba(200,170,90,0.04); }
+.cred-label { font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 6px; }
+.cred-title { font-size: 15px; font-weight: 700; color: #0a1628; margin-bottom: 6px; }
+.cred-sub { font-size: 12px; color: #888; line-height: 1.6; }
+.education { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid #e8e4dc; }
+.edu-left { padding: 40px; border-right: 1px solid #e8e4dc; background: white; }
+.edu-right { padding: 40px; background: white; }
+.edu-label { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #c8aa5a; margin-bottom: 10px; }
+.edu-school { font-size: 16px; font-weight: 700; color: #0a1628; margin-bottom: 6px; }
+.edu-degree { font-size: 13px; color: #666; line-height: 1.6; }
+.cta-section { background: #0a1628; padding: 64px 32px; text-align: center; }
+.cta-title { color: white; font-size: 32px; font-weight: 700; margin-bottom: 12px; }
+.cta-sub { color: rgba(255,255,255,0.5); font-size: 14px; margin-bottom: 32px; }
+.btn-outline { background: transparent; color: #c8aa5a; padding: 12px 28px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: 1px solid rgba(200,170,90,0.5); border-radius: 2px; margin-left: 12px; }
+</style></head><body>
+<div class="nav"><div><div class="nav-logo">Volare Travel Services</div><div class="nav-tagline">Where luxury travel takes flight</div></div><div class="nav-links"><a href="#">Home</a><a href="#">Travel</a><a href="#">Charter</a><a href="#">Pilot Services</a><a href="#" class="active">About</a><a href="#">Contact</a></div></div>
+<div class="hero"><div><div class="hero-eyebrow">The Pilot Behind Volare</div><div class="hero-headline">Built by someone<br>who flies for a living.</div><div class="hero-sub">Connor Casarella is a professional pilot, luxury travel advisor, and founder of Volare Travel Services — based at Dallas Love Field and flying internationally on the Bombardier Global XRS.</div><button class="btn-gold">Work with Connor</button></div><div class="photo-frame"><div class="photo-initials">CC</div><div class="photo-name">Connor Casarella</div><div class="photo-title">Pilot · Advisor · Founder</div><div class="whos-who"><div class="whos-who-dot"></div><span class="whos-who-text">Marquis Who's Who in America</span></div></div></div>
+<div class="diff"><div class="diff-label">The Volare Difference</div><div class="diff-quote">"Most travel advisors have never set foot in a cockpit. Most charter brokers have never personally flown the routes they're selling. Connor has done both — for years."</div><div class="diff-sub">That's not a marketing line. Every recommendation comes from genuine experience — whether it's the best routing into Geneva, which operator to trust, or which London hotel earns a second stay.</div></div>
+<div class="story"><div class="story-left"><div class="section-label">The Aviation Side</div><div class="section-title">Flying the Bombardier Global at the highest level</div><div class="section-body"><p>Connor flies the Bombardier Global XRS internationally for Solairus Aviation under Part 135. The Global XRS is an ultra-long-range large-cabin business jet built for nonstop transcontinental and transoceanic missions.</p><p>Beyond the flight deck, Connor serves on Solairus's safety committee — bringing a structured, systems-level approach to risk management that carries directly into how he vets charter operators for clients.</p><p>He is currently pursuing his Certified Aviation Manager (CAM) designation through NBAA — the gold standard credential for aviation management professionals.</p></div></div><div class="story-right"><div class="section-label">The Travel Side</div><div class="section-title">A travel advisor with a pilot's eye for detail</div><div class="section-body"><p>As a Fora-certified travel advisor with access to the Virtuoso network, Connor books luxury hotels and travel experiences for clients who expect more than a transactional booking experience.</p><p>Booking through Volare unlocks Virtuoso perks — room upgrades, daily breakfast, resort credits, and VIP treatment across 175,000+ properties — at no extra cost to you.</p><p>Connor's travel has taken him across Europe and beyond. His trip reports are first-hand accounts. When he recommends a hotel, he's been there — or knows the operator personally.</p></div></div></div>
+<div class="credentials"><div class="section-label">Credentials & Roles</div><div class="section-title">What Connor brings to every engagement</div><div class="cred-grid"><div class="cred-card featured"><div class="cred-label">Recognition</div><div class="cred-title">Marquis Who's Who in America</div><div class="cred-sub">Selected for inclusion among the most accomplished professionals in the United States</div></div><div class="cred-card"><div class="cred-label">Aviation</div><div class="cred-title">Part 135 Captain</div><div class="cred-sub">Bombardier Global XRS · Solairus Aviation · International operations</div></div><div class="cred-card"><div class="cred-label">Travel</div><div class="cred-title">Fora Certified Advisor</div><div class="cred-sub">Virtuoso member · 175,000+ bookable properties · Preferred partner perks</div></div><div class="cred-card"><div class="cred-label">Leadership</div><div class="cred-title">LFPA Board Member</div><div class="cred-sub">Love Field Pilots Association · Dallas Love Field · Membership & community</div></div><div class="cred-card"><div class="cred-label">Safety</div><div class="cred-title">Safety Committee</div><div class="cred-sub">Solairus Aviation · SMS oversight · Risk management</div></div><div class="cred-card"><div class="cred-label">Designation</div><div class="cred-title">NBAA CAM Candidate</div><div class="cred-sub">Certified Aviation Manager · National Business Aviation Association</div></div></div></div>
+<div class="education"><div class="edu-left"><div class="edu-label">Flight Training</div><div class="edu-school">Aviator College</div><div class="edu-degree">Professional flight training — the foundation of Connor's aviation career from primary through commercial certification</div></div><div class="edu-right"><div class="edu-label">Academic</div><div class="edu-school">Everglades University</div><div class="edu-degree">Bachelor of Science · Aviation & Aerospace — Flight Operations</div></div></div>
+<div class="cta-section"><div class="cta-title">Work with Connor</div><div class="cta-sub">Whether you're planning a trip or chartering a jet, you're working directly with a professional who's done both.</div><button class="btn-gold">Plan My Trip</button><button class="btn-outline">Charter a Jet</button></div>
+</body></html>
