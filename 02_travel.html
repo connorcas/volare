@@ -45,13 +45,32 @@
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form-full { grid-column: 1 / -1; }
 .field-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #888; display: block; margin-bottom: 6px; }
-.form-input { background: #f8f6f1; border: 1px solid #ddd; color: #333; padding: 10px 14px; font-size: 13px; border-radius: 2px; width: 100%; }
+
 .btn-gold { background: #c8aa5a; color: #0a1628; padding: 12px 36px; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 2px; margin-top: 20px; width: 100%; }
+
+.inquire-btn {
+  display: inline-block;
+  background: #c8aa5a;
+  color: #0a1628;
+  padding: 16px 48px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+.inquire-btn:hover { background: #b8973f; }
 </style></head><body>
 <div class="nav"><div><a href="index.html" style="display:block;line-height:0;"><img src="volarelogo.png" alt="Volare Travel Services" style="height:44px;width:auto;display:block;" /></a></div><div class="nav-links"><a href="index.html">Home</a><a href="02_travel.html" class="active">Travel</a><a href="03_charter.html">Charter</a><a href="04_pilot_services.html">Pilot Services</a><a href="05_about.html">About</a><a href="06_contact.html">Contact</a></div></div>
 <div class="hero"><div class="hero-eyebrow">Luxury Travel Advisory</div><div class="hero-headline">Luxury Travel, Elevated by Expertise.</div><div class="hero-sub">Most advisors book trips. We've flown them.</div><div class="fora-badge"><div class="fora-dot"></div> Powered by Fora · Virtuoso Member</div></div>
 <div class="perks"><div class="section-label">Book through Volare and unlock</div><div class="section-title">Exclusive perks at no extra cost</div><div class="perks-grid"><div class="perk"><div class="perk-title">Room Upgrade</div><div class="perk-note">On arrival, when available</div></div><div class="perk"><div class="perk-title">Daily Breakfast</div><div class="perk-note">For two, every morning</div></div><div class="perk"><div class="perk-title">Resort Credits</div><div class="perk-note">Spa, dining & more</div></div><div class="perk"><div class="perk-title">Early Check-in</div><div class="perk-note">Late check-out too</div></div><div class="perk"><div class="perk-title">VIP Treatment</div><div class="perk-note">At 175,000+ hotels</div></div></div></div>
 <div class="services-grid"><div class="service-item"><div class="service-num">01</div><div class="service-name">Hotel & Resort Booking</div><div class="service-desc">Access to 175,000+ hotels through Virtuoso and Fora's preferred partner network.</div></div><div class="service-item"><div class="service-num">02</div><div class="service-name">Full Itinerary Planning</div><div class="service-desc">From flights to ground transfers, restaurants to experiences — every detail handled.</div></div><div class="service-item"><div class="service-num">03</div><div class="service-name">Flight Recommendations</div><div class="service-desc">Routing, airline, and cabin advice from someone who actually flies for a living.</div></div><div class="service-item"><div class="service-num">04</div><div class="service-name">Charter Coordination</div><div class="service-desc">Seamlessly connect your private charter leg with the rest of your trip.</div></div></div>
 <div class="tripreport"><div class="section-label">Featured Trip Report</div><div class="section-title">From the advisor's journal</div><div class="report-card"><div class="report-img"><div class="report-img-label">Property</div><div class="report-img-name">JW Marriott Grosvenor House</div><div class="report-img-loc">Mayfair, London</div></div><div class="report-body"><div class="report-tags"><span class="report-tag">City Break</span><span class="report-tag">Luxury Hotel</span><span class="report-tag">London</span><span class="report-tag">Marriott Bonvoy</span></div><div class="report-headline">Timeless British elegance in the heart of Mayfair</div><div class="report-excerpt">Nestled steps from Hyde Park and Bond Street, Grosvenor House blends classic London character with modern luxury. Impeccable service, plush pillowtop beds, and marble bathrooms.</div><div class="report-perks"><span class="report-perk">+ Welcome amenity</span><span class="report-perk">· Daily breakfast</span><span class="report-perk">· Upgrade on arrival</span><span class="report-perk">· Extended checkout</span></div><a href="https://www.foratravel.com/trip-reports/VGAHFX/luxury-in-the-heart-of-mayfair-jw-grosvenor-house-experience-connor-casarella" target="_blank" rel="noopener" style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#c8aa5a;text-decoration:none;">Read full report →</a></div></div></div>
-<div class="cta-section"><div class="cta-title">Where do you want to go?</div><div class="cta-sub">Tell Connor where you're headed and he'll handle everything from there.</div><div class="form-wrap"><div class="form-grid"><div><label class="field-label">Your name</label><input class="form-input" placeholder="Name"/></div><div><label class="field-label">Email address</label><input class="form-input" placeholder="Email"/></div><div><label class="field-label">Destination(s)</label><input class="form-input" placeholder="Where to?"/></div><div><label class="field-label">Travel dates</label><input class="form-input" placeholder="MM/DD/YYYY"/></div><div><label class="field-label">Number of travelers</label><input class="form-input" placeholder="e.g. 2"/></div><div><label class="field-label">Budget range</label><input class="form-input" placeholder="e.g. $5,000+"/></div><div class="form-full"><label class="field-label">Special requests</label><textarea class="form-input" rows="3" placeholder="Tell me about your ideal trip..."></textarea></div><div class="form-full"><button class="btn-gold">Send My Request</button></div></div></div></div>
+<div class="cta-section">
+  <div class="cta-title">Where do you want to go?</div>
+  <div class="cta-sub">Tell Connor where you're headed and he'll handle everything from there.</div>
+  <a href="sms:8609193322?body=I'm%20browsing%20the%20Volare%20website%20and%20would%20like%20some%20more%20information%20on%20your%20travel%20and%2For%20aviation%20services." class="inquire-btn">Inquire Now</a>
+</div>
 </body></html>

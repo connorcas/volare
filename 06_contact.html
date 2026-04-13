@@ -30,14 +30,29 @@
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form-full { grid-column: 1 / -1; }
 .field-label { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: #888; display: block; margin-bottom: 6px; }
-.form-input { background: #f8f8f8; border: 0.5px solid #ccc; color: #333; padding: 10px 14px; font-size: 13px; border-radius: 2px; width: 100%; font-family: Arial, sans-serif; }
+
 .form-select { background: #f8f8f8; border: 0.5px solid #ccc; color: #333; padding: 10px 14px; font-size: 13px; border-radius: 2px; width: 100%; font-family: Arial, sans-serif; }
-.submit-btn { background: #c8aa5a; color: #0a1628; padding: 12px 36px; font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 2px; cursor: pointer; margin-top: 20px; width: 100%; }
+
 .form-note { font-size: 11px; color: #aaa; text-align: center; margin-top: 12px; }
 .footer { background: #0a1628; padding: 32px; display: flex; justify-content: space-between; align-items: center; border-top: 0.5px solid rgba(200,170,90,0.2); }
 .footer-logo { color: #c8aa5a; font-size: 13px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; }
 .footer-tagline { color: rgba(200,170,90,0.5); font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 4px; }
 .footer-contact { text-align: right; color: rgba(255,255,255,0.5); font-size: 12px; line-height: 1.8; }
+
+.inquire-btn {
+  display: inline-block;
+  background: #c8aa5a;
+  color: #0a1628;
+  padding: 16px 48px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+.inquire-btn:hover { background: #b8973f; }
 </style>
 </head>
 <body>
@@ -108,38 +123,13 @@
     </div>
   </div>
 
-  <div class="contact-form">
-    <div class="section-label">Send a message</div>
-    <div class="section-title">How can Connor help?</div>
-    <div class="form-grid">
-      <div>
-        <label class="field-label">Your name</label>
-        <input class="form-input" placeholder="Name" />
-      </div>
-      <div>
-        <label class="field-label">Email address</label>
-        <input class="form-input" placeholder="your@email.com" />
-      </div>
-      <div class="form-full">
-        <label class="field-label">Subject</label>
-        <select class="form-select">
-          <option>Travel Inquiry</option>
-          <option>Charter Quote</option>
-          <option>Pilot Services</option>
-          <option>Consulting</option>
-          <option>General</option>
-        </select>
-      </div>
-      <div class="form-full">
-        <label class="field-label">Message</label>
-        <textarea class="form-input" rows="6" placeholder="Tell Connor what you have in mind..."></textarea>
-      </div>
-      <div class="form-full">
-        <button class="submit-btn">Send Message</button>
-        <div class="form-note">Connor reviews all messages personally</div>
-      </div>
-    </div>
-  </div>
+  <div class="contact-form" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;">
+  <div style="font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#c8aa5a;margin-bottom:4px;">Send a message</div>
+  <div style="font-size:22px;font-weight:700;color:#111;margin-bottom:8px;">How can Connor help?</div>
+  <div style="font-size:14px;color:#888;text-align:center;max-width:340px;line-height:1.7;margin-bottom:16px;">Tap below to send Connor a text directly — he reviews every message personally.</div>
+  <a href="sms:8609193322?body=I'm%20browsing%20the%20Volare%20website%20and%20would%20like%20some%20more%20information%20on%20your%20travel%20and%2For%20aviation%20services." class="inquire-btn">Inquire Now</a>
+  <div style="font-size:11px;color:#aaa;margin-top:8px;">Opens your messaging app</div>
+</div>
 </div>
 
 <div class="footer">
