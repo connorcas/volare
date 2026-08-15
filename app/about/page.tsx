@@ -1,0 +1,5 @@
+import { InteriorPage } from '@/components/volare-shell'
+
+export default function AboutPage() {
+  return <InteriorPage eyebrow="About Volare" title="Bridging the cockpit and luxury hospitality." description="Volare was built on a simple belief: the best journeys are shaped by people who understand both the route and the reason for taking it."><div className="flex flex-col gap-6 text-lg leading-8 text-slate"><p>Meet Connor Casarella — aviator, entrepreneur, and luxury travel advisor.</p><p>With years of professional aviation experience and a global hospitality network, Connor brings a rare perspective to every itinerary and charter.</p></div><div className="grid grid-cols-2 gap-3"><div className="border border-navy/10 bg-white p-6 font-sans text-xs font-semibold tracking-[0.16em]">NBAA</div><div className="border border-navy/10 bg-white p-6 font-sans text-xs font-semibold tracking-[0.16em]">VIRTUOSO</div><div className="border border-navy/10 bg-white p-6 font-sans text-xs font-semibold tracking-[0.16em]">FORA</div><div className="border border-navy/10 bg-white p-6 font-sans text-xs font-semibold tracking-[0.16em]">LFPA</div></div></InteriorPage>
+}

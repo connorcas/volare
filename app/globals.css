@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-navy: #0a1628;
+  --color-gold: #c8aa5a;
+  --color-ivory: #fafafa;
+  --color-slate: #566274;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-serif: Arial, Helvetica, sans-serif;
+  --radius: 0rem;
+}
+
+:root {
+  color-scheme: light;
+  --background: #fafafa;
+  --foreground: #0a1628;
+  --card: #ffffff;
+  --card-foreground: #0a1628;
+  --popover: #ffffff;
+  --popover-foreground: #0a1628;
+  --primary: #0a1628;
+  --primary-foreground: #ffffff;
+  --secondary: #f2f2ef;
+  --secondary-foreground: #0a1628;
+  --muted: #f2f2ef;
+  --muted-foreground: #566274;
+  --accent: #c8aa5a;
+  --accent-foreground: #0a1628;
+  --border: rgba(10, 22, 40, 0.12);
+  --input: rgba(10, 22, 40, 0.18);
+  --ring: #c8aa5a;
+}
+
+* { border-color: var(--border); }
+html { scroll-behavior: smooth; background: var(--background); }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+::selection { background: #c8aa5a; color: #0a1628; }
+.field { width: 100%; border: 0; border-bottom: 1px solid rgba(10,22,40,.22); background: transparent; padding: .75rem 0; font-family: var(--font-sans); font-size: .875rem; color: #0a1628; outline: none; transition: border-color .2s; }
+.field::placeholder { color: rgba(86,98,116,.7); }
+.field:focus { border-color: #c8aa5a; }
