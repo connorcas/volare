@@ -139,7 +139,7 @@ export default function Charter() {
                   "I've sat in the left seat of the aircraft I'm recommending. That changes everything about how I broker a charter."
                 </blockquote>
                 <p className="font-sans text-sm text-slate-600 font-light leading-relaxed">
-                  Most charter brokers are salespeople. Connor is a Part 135 captain flying the Bombardier Global XRS internationally.
+                  Most charter brokers are salespeople. Connor is a Part 135 captain flying the Bombardier Global 7500 internationally.
                 </p>
               </div>
 

@@ -3,7 +3,7 @@ import { Plane, Award, ShieldCheck, MapPin, CheckCircle2 } from "lucide-react";
 const VolareDifference = () => {
     const credentials = [
         { title: "Part 135 Captain", subtitle: "Commercial Aviation" },
-        { title: "Bombardier Global XRS", subtitle: "Type Rated Pilot" },
+        { title: "Bombardier Global 7500", subtitle: "Type Rated Pilot" },
         { title: "LFPA Board Member", subtitle: "Industry Leadership" },
         { title: "NBAA CAM Candidate", subtitle: "Aviation Management" },
         { title: "Fora Certified Advisor", subtitle: "Luxury Travel Specialist" },

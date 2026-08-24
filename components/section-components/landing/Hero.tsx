@@ -9,10 +9,7 @@ const Hero = () => {
 
     return (
         <section className="relative w-full overflow-hidden rounded-3xl bg-[#0A1628] text-[#F4F1EA] border border-[#C5A880]/20 py-16 md:py-20 px-6 sm:px-12 shadow-2xl">
-            {/* Background Grid Pattern */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#C5A88015_1px,transparent_1px),linear-gradient(to_bottom,#C5A88015_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_75%_75%_at_50%_50%,#000_40%,transparent_100%)] pointer-events-none z-0" />
-
-            {/* Ambient Lighting Glow */}
             <div className="absolute top-1/2 left-1/2 h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C5A880]/10 blur-[140px] pointer-events-none z-0" />
 
             <div className="relative z-10 mx-auto max-w-5xl text-center space-y-8">
@@ -34,9 +31,8 @@ const Hero = () => {
                 </div>
 
                 {/* Flight Booking Strip */}
-                <div className="max-w-4xl mx-auto pt-2 z-20 relative">
+                {/* <div className="max-w-4xl mx-auto pt-2 z-20 relative">
 
-                    {/* Trip Selector */}
                     <div className="flex items-center justify-center gap-3 mb-4 font-sans text-xs">
                         <button
                             onClick={() => setTripType("one-way")}
@@ -60,11 +56,9 @@ const Hero = () => {
                         </button>
                     </div>
 
-                    {/* Clean Rounded Bar */}
                     <div className="rounded-2xl sm:rounded-full border border-[#C5A880]/30 bg-[#070C14]/90 p-2 sm:p-2.5 shadow-2xl backdrop-blur-md">
                         <div className="grid grid-cols-1 sm:grid-cols-12 gap-2 items-center">
 
-                            {/* Departure */}
                             <div className="sm:col-span-4 flex items-center gap-3 rounded-xl sm:rounded-full border border-white/5 bg-white/5 px-4 py-2 text-left">
                                 <MapPin className="h-4 w-4 text-[#C5A880] shrink-0" />
                                 <div className="space-y-0.5 overflow-hidden w-full">
@@ -79,7 +73,6 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* Destination */}
                             <div className="sm:col-span-4 flex items-center gap-3 rounded-xl sm:rounded-full border border-white/5 bg-white/5 px-4 py-2 text-left">
                                 <MapPin className="h-4 w-4 text-[#C5A880] shrink-0" />
                                 <div className="space-y-0.5 overflow-hidden w-full">
@@ -94,7 +87,6 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* Date */}
                             <div className="sm:col-span-2 flex items-center gap-2 rounded-xl sm:rounded-full border border-white/5 bg-white/5 px-3.5 py-2 text-left">
                                 <Calendar className="h-4 w-4 text-[#C5A880] shrink-0" />
                                 <div className="space-y-0.5 overflow-hidden w-full">
@@ -109,7 +101,6 @@ const Hero = () => {
                                 </div>
                             </div>
 
-                            {/* Action Button */}
                             <div className="sm:col-span-2">
                                 <Button className="w-full h-full min-h-[42px] rounded-xl sm:rounded-full bg-[#C5A880] px-4 font-sans text-xs font-semibold uppercase tracking-widest text-[#070C14] shadow-md hover:bg-white transition-all duration-300">
                                     <span>Inquire</span>
@@ -119,7 +110,7 @@ const Hero = () => {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="relative w-full max-w-4xl mx-auto select-none z-10">
                     <img

@@ -9,7 +9,7 @@ const CredentialsSection = () => {
             icon: <ShieldCheck className="h-5 w-5 text-[#C5A880]" />,
         },
         {
-            title: "Bombardier Global XRS",
+            title: "Bombardier Global 7500",
             category: "Type Rated Pilot",
             detail: "Ultra-Long-Range Jet Flight Specialist",
             icon: <Plane className="h-5 w-5 text-[#C5A880]" />,
