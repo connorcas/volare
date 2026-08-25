@@ -15,6 +15,7 @@ import {
   Clock,
   Crown,
 } from "lucide-react";
+import BannerSection from "@/components/general-components/BannerSection";
 
 export default function TravelSection() {
   const [activeFaq, setActiveFaq] = useState<number | null>(2);
@@ -129,33 +130,12 @@ export default function TravelSection() {
   return (
     <UserLayout>
       <div className="min-h-screen pb-20 space-y-16 lg:space-y-24">
-
-        <section className="px-2">
-          <div className="relative w-full overflow-hidden rounded-3xl bg-[#0A1628] text-[#F4F1EA] border border-[#C5A880]/20 py-16 md:py-20 px-6 sm:px-12 shadow-2xl">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#C5A88015_1px,transparent_1px),linear-gradient(to_bottom,#C5A88015_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_75%_75%_at_50%_50%,#000_40%,transparent_100%)] pointer-events-none z-0" />
-            <div className="absolute top-1/2 left-1/2 h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C5A880]/10 blur-[140px] pointer-events-none z-0" />
-
-            <div className="relative z-10 mx-auto max-w-5xl text-center space-y-8">
-
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#C5A880]/40 bg-[#070C14]/80 px-4 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#C5A880] backdrop-blur-md">
-                <Plane className="h-3.5 w-3.5 text-[#C5A880]" />
-                <span>Luxury Travel Advisory</span>
-              </div>
-
-              <div className="space-y-4">
-                <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-[#F4F1EA] leading-[1.08]">
-                  Luxury Travel, <br />
-                  <span className="italic font-normal text-[#C5A880]">
-                    Elevated by Expertise.
-                  </span>
-                </h1>
-                <p className="font-serif italic text-base sm:text-xl text-slate-300 font-light max-w-xl mx-auto">
-                  Most advisors book trips. We've flown them.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <BannerSection
+          slogan="Luxury Travel Advisory"
+          title={"Luxury Travel,"}
+          italicTitle={"Elevated by Expertise."}
+          subTitle={"Most advisors book trips. We've flown them."}
+        />
 
         <section className="mx-auto max-w-7xl px-4">
           <div className="space-y-8">
@@ -297,74 +277,76 @@ export default function TravelSection() {
           </div>
         </section>
 
-        <section className="px-4">
-          <div className="relative mx-auto max-w-7xl overflow-hidden rounded-4xl bg-[#0A1628] text-[#F4F1EA] border border-[#C5A880]/20 p-8 sm:p-12 lg:p-16 shadow-2xl">
-            <div className="absolute top-0 right-1/4 h-80 w-80 rounded-full bg-[#C5A880]/10 blur-[130px] pointer-events-none" />
+        <div className="px-2">
+          <section className="rounded-2xl bg-[#0A1628]">
+            <div className="relative mx-auto max-w-7xl overflow-hidden text-[#F4F1EA] border border-[#C5A880]/20 p-8 sm:p-12 lg:p-16">
+              <div className="absolute top-0 right-1/4 h-80 w-80 rounded-full bg-[#C5A880]/10 blur-[130px] pointer-events-none" />
 
-            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              <div className="lg:col-span-5 space-y-6 lg:sticky">
-                <div className="text-center lg:text-left space-y-4">
-                  <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#F4F1EA] leading-tight">
-                    Frequently <br className="hidden lg:inline" />
-                    <span className="italic font-normal text-[#C5A880]">asked questions</span>
-                  </h2>
-                  <p className="font-sans text-xs sm:text-sm text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
-                    Everything you need to know about our preferred booking rates, routing advisory, and itinerary changes.
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-[#C5A880]/15 space-y-3 text-center lg:text-left">
-                  <p className="font-mono text-xs text-slate-400">
-                    Have a specific route in mind?
-                  </p>
-                  <div className="flex justify-center lg:justify-start">
-                    <a
-                      href="mailto:connor.casarella@volareavi.com"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#C5A880] px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-[#070C14] hover:bg-white transition-all shadow-md"
-                    >
-                      <span>Ask Connor Directly</span>
-                      <span className="text-sm">→</span>
-                    </a>
+              <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+                <div className="lg:col-span-5 space-y-6 lg:sticky">
+                  <div className="text-center lg:text-left space-y-4">
+                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#F4F1EA] leading-tight">
+                      Frequently <br className="hidden lg:inline" />
+                      <span className="italic font-normal text-[#C5A880]">asked questions</span>
+                    </h2>
+                    <p className="font-sans text-xs sm:text-sm text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
+                      Everything you need to know about our preferred booking rates, routing advisory, and itinerary changes.
+                    </p>
+                  </div>
+                  <div className="pt-4 border-t border-[#C5A880]/15 space-y-3 text-center lg:text-left">
+                    <p className="font-mono text-xs text-slate-400">
+                      Have a specific route in mind?
+                    </p>
+                    <div className="flex justify-center lg:justify-start">
+                      <a
+                        href="mailto:connor.casarella@volareavi.com"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#C5A880] px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-[#070C14] hover:bg-white transition-all shadow-md"
+                      >
+                        <span>Ask Connor Directly</span>
+                        <span className="text-sm">→</span>
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="lg:col-span-7 divide-y divide-[#C5A880]/15 border-y border-[#C5A880]/15">
-                {faqs.map((faq) => {
-                  const isOpen = activeFaq === faq.id;
-                  return (
-                    <div key={faq.id} className="py-6 transition-colors">
-                      <button
-                        type="button"
-                        onClick={() => setActiveFaq(isOpen ? null : faq.id)}
-                        className="w-full flex items-start justify-between gap-6 text-left group"
-                      >
-                        <div className="flex items-start gap-4">
-                          <span className="font-mono text-xs font-semibold text-[#C5A880]/60 mt-1">
-                            0{faq.id + 1}
+                <div className="lg:col-span-7 divide-y divide-[#C5A880]/15 border-y border-[#C5A880]/15">
+                  {faqs.map((faq) => {
+                    const isOpen = activeFaq === faq.id;
+                    return (
+                      <div key={faq.id} className="py-6 transition-colors">
+                        <button
+                          type="button"
+                          onClick={() => setActiveFaq(isOpen ? null : faq.id)}
+                          className="w-full flex items-start justify-between gap-6 text-left group"
+                        >
+                          <div className="flex items-start gap-4">
+                            <span className="font-mono text-xs font-semibold text-[#C5A880]/60 mt-1">
+                              0{faq.id + 1}
+                            </span>
+                            <span className="font-serif text-lg sm:text-xl font-normal text-[#F4F1EA] group-hover:text-[#C5A880] transition-colors leading-snug">
+                              {faq.q}
+                            </span>
+                          </div>
+                          <span className="shrink-0 mt-1 font-mono text-xl text-[#C5A880]">
+                            {isOpen ? "[ - ]" : "[ + ]"}
                           </span>
-                          <span className="font-serif text-lg sm:text-xl font-normal text-[#F4F1EA] group-hover:text-[#C5A880] transition-colors leading-snug">
-                            {faq.q}
-                          </span>
-                        </div>
-                        <span className="shrink-0 mt-1 font-mono text-xl text-[#C5A880]">
-                          {isOpen ? "[ - ]" : "[ + ]"}
-                        </span>
-                      </button>
+                        </button>
 
-                      {isOpen && (
-                        <div className="mt-4 pl-8 sm:pl-9 pr-4">
-                          <p className="font-sans text-xs sm:text-sm font-light text-slate-300 leading-relaxed whitespace-pre-line border-l border-[#C5A880]/30 pl-4">
-                            {faq.a}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-                  );
-                })}
+                        {isOpen && (
+                          <div className="mt-4 pl-8 sm:pl-9 pr-4">
+                            <p className="font-sans text-xs sm:text-sm font-light text-slate-300 leading-relaxed whitespace-pre-line border-l border-[#C5A880]/30 pl-4">
+                              {faq.a}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
     </UserLayout>
   );

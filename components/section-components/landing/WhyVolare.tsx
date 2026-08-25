@@ -29,7 +29,7 @@ const WhyVolare = () => {
     ];
 
     return (
-        <section id="why-volare" className="relative w-full overflow-hidden bg-[#0A1628] py-20 md:py-28 text-[#F4F1EA] rounded-3xl">
+        <section id="why-volare" className="relative w-full overflow-hidden bg-[#0A1628] py-20 md:py-28 text-[#F4F1EA] rounded-2xl">
             <div className="absolute top-1/2 left-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C5A880]/10 blur-[130px] pointer-events-none" />
 
             <div className="relative z-10 mx-auto max-w-6xl px-6 md:px-12">

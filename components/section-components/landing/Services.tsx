@@ -1,139 +1,129 @@
-import { Compass, Plane, ArrowRight } from "lucide-react";
+import React from "react";
+import Link from "next/link";
+import { Compass, Plane, ArrowUpRight, ShieldCheck, Sparkles } from "lucide-react";
 
-const Services = () => {
-    const steps = [
+export default function Services() {
+    const services = [
         {
             number: "01",
-            title: "TRAVEL ADVISORY",
-            subtitle: "Real-Time Airspace Intelligence",
+            title: "Luxury Travel Advisory",
+            subtitle: "Virtuoso Privileges & Global Itineraries",
             description:
-                "Comprehensive route analysis, live meteorological updates, and personalized airspace risk briefings directly from our master flight dispatch.",
-            icon: <Compass className="h-5 w-5 md:h-6 md:w-6 text-[#C5A880]" />,
+                "Bespoke itinerary design commanded with pilot-level logistics. Enjoy preferred partner rates, complimentary room upgrades, daily breakfast, and VIP resort credits across premier global hotels and private villas.",
+            icon: <Compass className="h-4 w-4 text-[#8C6D3F]" />,
             image: "/images/jet.png",
-            href: "#travel-advisory",
-            badge: "LIVE ADVISORY",
-            tagline: "Global Airspace Briefing",
+            href: "/travel",
+            tag: "Virtuoso Member",
+            highlights: ["Complimentary Upgrades", "VIP Resort Credits", "Dedicated Concierge"],
         },
         {
             number: "02",
-            title: "PRIVATE CHARTER",
-            subtitle: "Bespoke Journey Execution",
+            title: "Private Jet Charter",
+            subtitle: "Part 135 Worldwide Aircraft Sourcing",
             description:
-                "End-to-end luxury charter management, from tail selection to direct runway-side concierge service across global destinations.",
-            icon: <Plane className="h-5 w-5 md:h-6 md:w-6 text-[#C5A880]" />,
+                "Direct access to top-tier heavy, super-mid, and light aircraft. Every flight is audited for airframe pedigree, operator safety records, and crew duty limits with absolute transparency and zero broker markups.",
+            icon: <Plane className="h-4 w-4 text-[#8C6D3F]" />,
             image: "/images/hero-plan.png",
-            href: "#private-charter",
-            badge: "VIP FLEET",
-            tagline: "Tailored Flight Logistics",
+            href: "/charter",
+            tag: "Part 135 Vetted",
+            highlights: ["Bombardier Global Specialists", "Zero Hidden Markups", "Direct Pilot Review"],
         },
     ];
 
     return (
-        <section id="advisory-charter" className="relative w-full overflow-hidden bg-[#F4F1EA] py-12 md:py-24 text-[#0A1628]">
-            <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 md:px-12">
+        <div className="px-2 my-4">
+            <section id="services" className="relative w-full bg-white py-20 text-[#0A1628] rounded-2xl font-sans">
+                <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-12 space-y-16 sm:space-y-24">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#D6CEBF] pb-10">
+                        <div className="space-y-3 max-w-2xl">
+                            <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold">
+                                Operational Capabilities
+                            </span>
+                            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0A1628] tracking-tight leading-[1.08]">
+                                Precision Flight &amp; <br />
+                                <span className="italic text-[#B38E5D]">Curated Advisory.</span>
+                            </h2>
+                        </div>
+                        <p className="font-sans text-sm sm:text-base text-slate-600 font-light max-w-sm leading-relaxed">
+                            Eliminating broker friction by unifying cockpit command with luxury travel management.
+                        </p>
+                    </div>
 
-                <div className="flex flex-col items-center text-center">
-                    <span className="font-sans text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.25em] md:tracking-[0.3em] text-[#8C6D3F]">
-                        OUR SERVICES
-                    </span>
-                    <h2 className="mt-2 md:mt-3 font-serif text-2xl sm:text-3xl lg:text-5xl font-semibold uppercase tracking-[0.1em] md:tracking-[0.15em] text-[#0A1628]">
-                        TRAVEL ADVISORY &amp; PRIVATE CHARTER
-                    </h2>
-                </div>
+                    <div className="space-y-20 sm:space-y-28">
+                        {services.map((service, idx) => {
+                            const isReversed = idx % 2 !== 0;
 
-                <div className="relative mt-10 md:mt-20 flex flex-col space-y-12 md:space-y-24">
+                            return (
+                                <div
+                                    key={service.number}
+                                    className={`grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center ${isReversed ? "lg:flex-row-reverse" : ""
+                                        }`}>
 
-                    <div className="absolute left-1/2 top-8 hidden h-[calc(100%-8rem)] w-[2px] -translate-x-1/2 bg-gradient-to-b from-[#C5A880]/10 via-[#C5A880]/60 to-[#C5A880]/10 lg:block" />
+                                    <div className={`lg:col-span-6 ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
+                                        <div className="group relative aspect-[4/3] sm:aspect-[16/11] w-full overflow-hidden rounded-[2rem] p-8 sm:p-12 flex items-center justify-center transition-all duration-500">
 
-                    {steps.map((step, idx) => {
-                        const isEven = idx % 2 === 0;
-
-                        return (
-                            <div
-                                key={idx}
-                                className={`relative flex flex-col items-center gap-6 md:gap-10 lg:flex-row lg:gap-16 ${isEven ? "lg:flex-row" : "lg:flex-row-reverse"
-                                    }`}
-                            >
-                                <div className="absolute left-1/2 top-1/2 z-30 hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-[#C5A880] bg-[#070C14] font-sans text-xs font-bold text-[#C5A880] shadow-[0_0_20px_rgba(197,168,128,0.4)] lg:flex">
-                                    {step.number}
-                                </div>
-
-                                <div className="flex w-full items-center justify-between lg:hidden border-b border-[#C5A880]/20 pb-3">
-                                    <div className="inline-flex items-center gap-2 rounded-full border border-[#C5A880]/40 bg-white/80 px-3 py-1 shadow-sm">
-                                        {step.icon}
-                                        <span className="font-sans text-[10px] font-bold uppercase tracking-[0.15em] text-[#8C6D3F]">
-                                            STEP {step.number}
-                                        </span>
-                                    </div>
-                                    <span className="rounded-full border border-[#C5A880]/40 bg-[#070C14] px-3 py-1 font-sans text-[9px] font-bold uppercase tracking-widest text-[#C5A880]">
-                                        {step.badge}
-                                    </span>
-                                </div>
-
-                                <div className="w-full space-y-3 md:space-y-4 text-left lg:w-1/2">
-                                    <div className="hidden lg:inline-flex items-center gap-3 rounded-full border border-[#C5A880]/40 bg-white/80 px-4 py-1.5 shadow-sm backdrop-blur-sm">
-                                        {step.icon}
-                                        <span className="font-sans text-xs font-bold uppercase tracking-[0.2em] text-[#8C6D3F]">
-                                            STEP {step.number}
-                                        </span>
-                                    </div>
-
-                                    <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-semibold uppercase tracking-[0.1em] md:tracking-[0.15em] text-[#0A1628]">
-                                        {step.title}
-                                    </h3>
-
-                                    <p className="font-sans text-xs font-semibold tracking-wider text-[#C5A880]">
-                                        {step.subtitle}
-                                    </p>
-
-                                    <p className="font-sans text-xs leading-relaxed text-slate-600 sm:text-sm">
-                                        {step.description}
-                                    </p>
-
-                                    <div className="pt-1 md:pt-2">
-                                        <a
-                                            href={step.href}
-                                            className="inline-flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-[0.15em] md:tracking-[0.2em] text-[#0A1628] transition-colors hover:text-[#C5A880]"
-                                        >
-                                            <span>Explore Service</span>
-                                            <ArrowRight className="h-4 w-4 text-[#C5A880]" />
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <div className="w-full lg:w-1/2">
-                                    <div className="group relative aspect-[4/3] sm:aspect-[16/10] w-full overflow-hidden p-4 sm:p-6">
-                                        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(197,168,128,0.08)_1px,transparent_1px),linear-gradient(to_bottom,rgba(197,168,128,0.08)_1px,transparent_1px)] bg-[size:1.5rem_1.5rem] md:bg-[size:2rem_2rem] pointer-events-none" />
-                                        <div className="absolute left-1/2 top-1/2 h-[180px] sm:h-[220px] w-[80%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-[#C5A880]/20 via-[#E8D1B0]/15 to-[#C5A880]/20 blur-2xl md:blur-3xl pointer-events-none" />
-
-                                        <div className="relative z-20 flex items-center justify-between">
-                                            <span className="font-sans text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.2em] text-[#C5A880]">
-                                                {step.tagline}
-                                            </span>
-                                            <span className="hidden lg:inline-block rounded-full border border-[#C5A880]/40 bg-[#C5A880]/10 px-3 py-1 font-sans text-[9px] font-bold uppercase tracking-widest text-[#C5A880] backdrop-blur-md">
-                                                {step.badge}
-                                            </span>
-                                        </div>
-                                        <div className="relative z-20 flex h-full w-full items-center justify-center pb-4 sm:pb-6">
+                                            <div className="absolute inset-0 bg-[radial-gradient(#8C6D3F15_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none" />
+                                            <div className="absolute top-5 left-5 font-mono text-[12px] uppercase tracking-widest bg-[#F0EBE1] border border-[#D6CEBF] px-3 py-1 text-[#0A1628] rounded-full backdrop-blur-sm">
+                                                {service.tag}
+                                            </div>
+                                            <div className="absolute top-5 right-5 font-serif italic text-4xl text-[#8C6D3F]/40 font-light">
+                                                {service.number}
+                                            </div>
                                             <img
-                                                src={step.image}
-                                                alt={step.title}
-                                                className="h-auto w-full max-w-[90%] sm:max-w-[80%] object-contain filter drop-shadow-[0_15px_20px_rgba(0,0,0,0.85)] transition-transform duration-700 group-hover:scale-105"
+                                                src={service.image}
+                                                alt={service.title}
+                                                className="relative z-10 w-full max-w-[85%] h-auto object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.25)] transition-transform duration-700 group-hover:scale-105"
                                             />
+                                            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 h-24 bg-[#C5A880]/20 blur-3xl rounded-full pointer-events-none" />
+                                        </div>
+                                    </div>
+
+                                    <div className={`lg:col-span-6 space-y-6 text-left ${isReversed ? "lg:order-1" : "lg:order-2"}`}>
+                                        <div className="space-y-2">
+                                            <div className="flex items-center gap-2 font-mono text-sm text-[#8C6D3F] uppercase tracking-widest font-semibold">
+                                                {service.icon}
+                                                <span>Service Tier {service.number}</span>
+                                            </div>
+                                            <h3 className="font-serif text-3xl sm:text-4xl font-semibold text-[#0A1628] tracking-tight">
+                                                {service.title}
+                                            </h3>
+                                            <p className="font-mono text-md text-[#8C6D3F]">
+                                                {service.subtitle}
+                                            </p>
                                         </div>
 
-                                        <div className="absolute top-0 left-0 h-5 w-5 sm:h-8 sm:w-8 border-t-2 border-l-2 border-[#C5A880]/40" />
-                                        <div className="absolute bottom-0 right-0 h-5 w-5 sm:h-8 sm:w-8 border-b-2 border-r-2 border-[#C5A880]/40" />
+                                        <p className="font-sans text-sm sm:text-base text-slate-600 font-light leading-relaxed">
+                                            {service.description}
+                                        </p>
+
+                                        <div className="flex items-center flex-wrap gap-x-6 pt-2 border-t border-[#D6CEBF]">
+                                            {service.highlights.map((item, i) => (
+                                                <div key={i} className="flex items-center gap-2 font-mono text-[14px] text-[#0A1628] pt-3">
+                                                    <span className="h-1.5 w-1.5 rounded-full bg-[#8C6D3F]" />
+                                                    <span>{item}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <div className="pt-4">
+                                            <Link
+                                                href={service.href}
+                                                className="group inline-flex items-center gap-3 rounded-full bg-[#0A1628] px-7 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#8C6D3F] transition-all duration-300 shadow-sm"
+                                            >
+                                                <span>Explore {service.title}</span>
+                                                <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                                            </Link>
+                                        </div>
+
                                     </div>
+
                                 </div>
+                            );
+                        })}
+                    </div>
 
-                            </div>
-                        );
-                    })}
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
-};
-
-export default Services;
+}

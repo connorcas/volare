@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
+import BannerSection from "@/components/general-components/BannerSection";
 
 export default function Charter() {
 
@@ -99,34 +100,13 @@ export default function Charter() {
 
   return (
     <UserLayout>
-      <div className="min-h-screen bg-[#F7F6F2] text-[#0A1628] font-sans lg:space-y-24">
-
-        <section className="px-2">
-          <div className="relative w-full overflow-hidden rounded-3xl bg-[#0A1628] text-[#F4F1EA] border border-[#C5A880]/20 py-16 md:py-20 px-6 sm:px-12 shadow-2xl">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#C5A88015_1px,transparent_1px),linear-gradient(to_bottom,#C5A88015_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_75%_75%_at_50%_50%,#000_40%,transparent_100%)] pointer-events-none z-0" />
-            <div className="absolute top-1/2 left-1/2 h-[400px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C5A880]/10 blur-[140px] pointer-events-none z-0" />
-
-            <div className="relative z-10 mx-auto max-w-5xl text-center space-y-8">
-
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#C5A880]/40 bg-[#070C14]/80 px-4 py-1.5 font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-[#C5A880] backdrop-blur-md">
-                <Plane className="h-3.5 w-3.5 text-[#C5A880]" />
-                <span>Private Jet Charter</span>
-              </div>
-
-              <div className="space-y-4">
-                <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-[#F4F1EA] leading-[1.08]">
-                  Private Jet Charter, <br />
-                  <span className="italic font-normal text-[#C5A880]">
-                    Curated by a Working Pilot.
-                  </span>
-                </h1>
-                <p className="font-serif italic text-base sm:text-xl text-slate-300 font-light max-w-xl mx-auto">
-                  Connor doesn't just broker jets — he flies them professionally. Every operator recommendation comes from someone who has logged hours at the front of the cabin.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="min-h-screen bg-[#F7F6F2] text-[#0A1628] font-sans lg:space-y-24 ">
+        <BannerSection
+          slogan="Private Jet Charter"
+          title={"Private Jet Charter,"}
+          italicTitle={"Curated by a Working Pilot."}
+          subTitle={"Connor doesn't just broker jets — he flies them professionally. Every operator recommendation comes from someone who has logged hours at the front of the cabin."}
+        />
 
         <section className="mx-auto max-w-7xl px-4">
           <div>
