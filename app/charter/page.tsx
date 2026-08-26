@@ -1,9 +1,5 @@
-"use client";
-
-import { useState } from "react";
 import UserLayout from "@/components/layouts/UserLayout";
 import {
-  Plane,
   ArrowRight,
   ShieldCheck,
   Globe2,
@@ -12,10 +8,127 @@ import {
   Sparkles,
 } from "lucide-react";
 import BannerSection from "@/components/general-components/BannerSection";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "On-Demand Private Jet Charter & Fleet Brokerage | Volare Aviation",
+  description:
+    "Private jet charter curated by an active Part 135 Bombardier Global Captain. Access light, midsize, heavy, and ultra-long-range business jets with vetted airframe safety.",
+  keywords: [
+    "On-Demand Private Jet Charter",
+    "Part 135 Jet Brokerage",
+    "Bombardier Global 7500 Charter",
+    "Heavy Jet Charter USA",
+    "Ultra Long Range Charter",
+    "Empty Leg Flight Deals",
+    "Dallas Love Field Jet Charter",
+    "International Flight Routing",
+  ],
+  openGraph: {
+    title: "On-Demand Private Jet Charter | Volare Aviation",
+    description:
+      "Vetted Part 135 private jet charter and international flight brokerage commanded by an active airline transport pilot.",
+    url: "https://volareavi.com/charter",
+    siteName: "Volare Aviation",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://volareavi.com/images/hero-plan.png",
+        width: 1200,
+        height: 630,
+        alt: "Volare Aviation Private Jet Fleet Charter",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Private Jet Charter & Fleet Brokerage | Volare Aviation",
+    description:
+      "Curated by a working captain. Light, midsize, heavy, and ultra-long-range jet charter with zero broker markups.",
+    images: ["https://volareavi.com/images/hero-plan.png"],
+  },
+  alternates: {
+    canonical: "https://volareavi.com/charter",
+    languages: {
+      "x-default": "https://volareavi.com/charter",
+      "en-US": "https://volareavi.com/en-us/charter",
+      "en-CA": "https://volareavi.com/en-ca/charter",
+      "en-GB": "https://volareavi.com/en-gb/charter",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 export default function Charter() {
 
-  const [selectedFleet, setSelectedFleet] = useState(3);
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: "On-Demand Private Jet Charter",
+    provider: {
+      "@type": "AviationBusiness",
+      name: "Volare Aviation",
+      url: "https://volareavi.com",
+      image: "https://volareavi.com/images/hero-plan.png",
+    },
+    url: "https://volareavi.com/charter",
+    description:
+      "On-demand private jet charter, group charter, empty leg positioning, and international flight routing with Part 135 safety auditing.",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Worldwide",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Charter Fleet Categories",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Light Jet Charter",
+            description: "Nimble point-to-point regional flights for 4-6 passengers up to 1,500 nm.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Midsize Jet Charter",
+            description: "Coast-to-coast stand-up cabin comfort for 6-8 passengers up to 2,500 nm.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Heavy Jet Charter",
+            description: "Spacious multi-zone cabins for 8-12 passengers up to 4,000 nm with flight attendant service.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Ultra Long Range Jet Charter",
+            description: "Bombardier Global class intercontinental reach for 10-14 passengers with 6,000+ nm range.",
+          },
+        },
+      ],
+    },
+  };
+
   const pilotPillars = [
     {
       badge: "Part 135",
@@ -100,7 +213,12 @@ export default function Charter() {
 
   return (
     <UserLayout>
-      <div className="min-h-screen bg-[#F7F6F2] text-[#0A1628] font-sans lg:space-y-24 ">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <div className="min-h-screen bg-[#F7F6F2] text-[#0A1628] font-sans space-y-24 ">
         <BannerSection
           slogan="Private Jet Charter"
           title={"Private Jet Charter,"}
@@ -162,12 +280,11 @@ export default function Charter() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-10">
             {aircraftCategories.map((aircraft, idx) => {
-              const isSelected = selectedFleet === idx;
+              const isSelected = 3 === idx;
               return (
                 <div
                   key={idx}
-                  onClick={() => setSelectedFleet(idx)}
-                  className={`cursor-pointer flex flex-col justify-between rounded-3xl p-7 transition-all duration-300 min-h-[440px] ${isSelected
+                  className={`flex flex-col justify-between rounded-3xl p-7 transition-all duration-300 min-h-[440px] ${isSelected
                     ? "bg-[#0A1628] text-white ring-2 ring-[#C5A880] shadow-xl"
                     : "bg-white text-[#0A1628] border border-[#E6E1D3] hover:border-[#B38E5D] hover:shadow-md"}`}>
 

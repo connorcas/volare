@@ -2,9 +2,56 @@ import type { Metadata } from "next";
 import LegalPageLayout from "@/components/section-components/landing/legal/LegalPageLayout";
 
 export const metadata: Metadata = {
-    title: "Privacy Policy | Volare Aviation Services",
-    description: "Privacy Policy for Volare Aviation Services LLC.",
+    title: "Privacy Policy | Volare Aviation Services LLC",
+    description:
+        "Privacy Policy for Volare Aviation Services LLC. Learn how we collect, protect, and handle data for private jet charter, aviation advisory, and travel services.",
+    keywords: [
+        "Volare Aviation Privacy Policy",
+        "Aviation Services Data Protection",
+        "Private Jet Charter Privacy",
+        "SMS Privacy Volare Aviation",
+        "U.S. Data Rights Aviation",
+    ],
+    openGraph: {
+        title: "Privacy Policy | Volare Aviation Services LLC",
+        description:
+            "Comprehensive Privacy Policy detailing data collection, security, and passenger confidentiality for Volare Aviation Services LLC.",
+        url: "https://volareavi.com/privacy-policy",
+        siteName: "Volare Aviation",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://volareavi.com/images/hero-plan.png",
+                width: 1200,
+                height: 630,
+                alt: "Volare Aviation Services Privacy Policy",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Privacy Policy | Volare Aviation Services LLC",
+        description:
+            "Official Privacy Policy and data protection standards for Volare Aviation Services LLC.",
+        images: ["https://volareavi.com/images/hero-plan.png"],
+    },
+    alternates: {
+        canonical: "https://volareavi.com/privacy-policy",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
 };
+
 
 const sections = [
     { id: "introduction", title: "Introduction" },
@@ -28,13 +75,36 @@ const sections = [
 ];
 
 export default function PrivacyPolicy() {
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Privacy Policy | Volare Aviation Services LLC",
+        url: "https://volareavi.com/privacy-policy",
+        description:
+            "Privacy Policy for Volare Aviation Services LLC outlining passenger data collection, SMS preferences, and global privacy standards.",
+        datePublished: "2026-08-24",
+        dateModified: "2026-08-24",
+        publisher: {
+            "@type": "Organization",
+            name: "Volare Aviation Services LLC",
+            url: "https://volareavi.com",
+            logo: "https://volareavi.com/logo.png",
+        },
+    };
+
     return (
         <LegalPageLayout
             title="Privacy"
             italicTitle="Policy"
             effectiveDate="August 24, 2026"
-            sections={sections}
-        >
+            sections={sections}>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             <section id="introduction" className="space-y-4 pt-1">
                 <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-[#0A1628]">
                     Introduction

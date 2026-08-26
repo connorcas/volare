@@ -21,11 +21,10 @@ export default function Footer({
 }: FooterProps) {
     return (
         <footer className="relative w-full rounded-2xl bg-[#0A1628] text-[#F4F1EA] font-sans border border-[#C5A880]/20 pt-16 sm:pt-20 pb-12 overflow-hidden shadow-2xl">
-
             <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-10 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-12 pb-14 border-b border-white/10">
                     <div className="md:col-span-5 space-y-4">
-                        <Link href="/" className="inline-block">
+                        <Link href="/" className="inline-block ">
                             <span className="font-serif text-2xl font-semibold uppercase tracking-[0.2em] text-[#F4F1EA]">
                                 VOLARE
                             </span>
@@ -82,10 +81,10 @@ export default function Footer({
                     </div>
                 </div>
 
-                <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 font-mono text-sm text-slate-500">
+                <div className="pt-8 flex flex-col sm:flex-row items-center sm:items-center justify-center sm:justify-between gap-4 font-mono text-sm text-slate-500 text-center sm:text-left">
                     <p>© {new Date().getFullYear()} Volare Aviation Services LLC. All rights reserved.</p>
 
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center justify-center gap-6">
                         {legalLinks.map((item, idx) => (
                             <Link
                                 key={idx}
@@ -97,7 +96,6 @@ export default function Footer({
                         ))}
                     </div>
                 </div>
-
             </div>
         </footer>
     );

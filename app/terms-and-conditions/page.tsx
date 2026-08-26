@@ -2,8 +2,54 @@ import type { Metadata } from "next";
 import LegalPageLayout from "@/components/section-components/landing/legal/LegalPageLayout";
 
 export const metadata: Metadata = {
-    title: "Terms & Conditions | Volare Aviation Services",
-    description: "Terms and conditions governing use of Volare Aviation Services LLC.",
+    title: "Terms & Conditions | Volare Aviation Services LLC",
+    description:
+        "Terms and conditions governing private jet charter brokerage, aircraft sales, contract pilot services, and general use of Volare Aviation Services LLC.",
+    keywords: [
+        "Volare Aviation Terms and Conditions",
+        "Private Jet Charter Brokerage Terms",
+        "Air Charter Legal Disclosures",
+        "Aviation Consulting Agreement",
+        "Volare Aviation Services LLC Legal",
+    ],
+    openGraph: {
+        title: "Terms & Conditions | Volare Aviation Services LLC",
+        description:
+            "General legal terms, air charter brokerage disclosures, and user responsibilities for Volare Aviation Services LLC.",
+        url: "https://volareavi.com/terms",
+        siteName: "Volare Aviation",
+        locale: "en_US",
+        type: "website",
+        images: [
+            {
+                url: "https://volareavi.com/images/hero-plan.png",
+                width: 1200,
+                height: 630,
+                alt: "Volare Aviation Terms and Conditions",
+            },
+        ],
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Terms & Conditions | Volare Aviation Services LLC",
+        description:
+            "Terms and conditions governing private aircraft brokerage and travel services by Volare Aviation Services LLC.",
+        images: ["https://volareavi.com/images/hero-plan.png"],
+    },
+    alternates: {
+        canonical: "https://volareavi.com/terms",
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+        },
+    },
 };
 
 const sections = [
@@ -38,12 +84,36 @@ const sections = [
 ];
 
 export default function TermsAndConditions() {
+
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: "Terms and Conditions | Volare Aviation Services LLC",
+        url: "https://volareavi.com/terms",
+        description:
+            "Terms of service, flight brokerage conditions, and legal disclosures for Volare Aviation Services LLC.",
+        datePublished: "2026-08-24",
+        dateModified: "2026-08-24",
+        publisher: {
+            "@type": "Organization",
+            name: "Volare Aviation Services LLC",
+            url: "https://volareavi.com",
+            logo: "https://volareavi.com/logo.png",
+        },
+    };
+
     return (
         <LegalPageLayout
             title="Terms &"
             italicTitle="Conditions"
             effectiveDate="August 24, 2026"
             sections={sections}>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+
             <section id="introduction" className="space-y-4 pt-1">
                 <h2 className="font-serif text-2xl sm:text-3xl font-semibold text-[#0A1628]">
                     Introduction

@@ -39,7 +39,7 @@ export default function Services() {
                             <span className="font-mono text-xs uppercase tracking-[0.25em] text-[#8C6D3F] font-semibold">
                                 Operational Capabilities
                             </span>
-                            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-light text-[#0A1628] tracking-tight leading-[1.08]">
+                            <h2 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-semibold text-[#0A1628] tracking-tight leading-[1.08]">
                                 Precision Flight &amp; <br />
                                 <span className="italic text-[#B38E5D]">Curated Advisory.</span>
                             </h2>

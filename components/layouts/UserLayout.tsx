@@ -4,6 +4,8 @@ import React, { useState, useEffect } from "react";
 import { Mail, ArrowUpRight, Sparkles, ArrowUp } from "lucide-react";
 import Header from "../general-components/Header";
 import Footer from "../general-components/Footer";
+import Image from "next/image";
+import { WHATSAPP_LINK } from "@/constants/common.constant";
 
 interface UserLayoutProps {
     children: React.ReactNode;
@@ -68,7 +70,9 @@ const UserLayout = ({ children }: UserLayoutProps) => {
                                 </a>
 
                                 <a
-                                    href="#travel"
+                                    href={WHATSAPP_LINK}
+                                    target="_black"
+                                    rel="noopener noreferrer"
                                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-[#0A1628] bg-white/80 px-8 py-4 font-sans text-xs font-semibold uppercase tracking-widest text-[#0A1628] backdrop-blur-md transition-all duration-300 hover:bg-[#0A1628] hover:text-[#F4F1EA]"
                                 >
                                     <span>Inquire Travel Advisory</span>
@@ -87,12 +91,19 @@ const UserLayout = ({ children }: UserLayoutProps) => {
                 onClick={scrollToTop}
                 aria-label="Scroll to top"
                 className={`fixed bottom-6 left-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-[#D6CEBF] bg-[#FAF9F5]/90 text-[#0A1628] shadow-lg backdrop-blur-md transition-all duration-300 hover:bg-[#0A1628] hover:text-white hover:border-[#0A1628] ${showScrollTop
-                        ? "translate-y-0 opacity-100 pointer-events-auto"
-                        : "translate-y-4 opacity-0 pointer-events-none"
-                    }`}
-            >
+                    ? "translate-y-0 opacity-100 pointer-events-auto"
+                    : "translate-y-4 opacity-0 pointer-events-none"
+                    }`}>
                 <ArrowUp className="h-4 w-4 stroke-[2]" />
             </button>
+
+            <a
+                href={WHATSAPP_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="z-50 fixed bottom-5 right-5">
+                <Image src="/images/whats-logo.png" width={75} height={75} alt="Connect on Whatsapp" />
+            </a>
         </div>
     );
 };

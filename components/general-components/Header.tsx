@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { WHATSAPP_LINK } from "@/constants/common.constant";
 
 export default function Header({
     navLinks = [
@@ -55,9 +56,10 @@ export default function Header({
 
                     <div className="flex items-center gap-3">
                         <a
-                            href="#charter"
-                            className="hidden sm:inline-flex rounded-full border-2 border-[#050A10] px-6 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-[#050A10] transition-all hover:bg-[#050A10] hover:text-white"
-                        >
+                            href={WHATSAPP_LINK}
+                            target="_black"
+                            rel="noopener noreferrer"
+                            className="hidden sm:inline-flex rounded-full border-2 border-[#050A10] px-6 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-[#050A10] transition-all hover:bg-[#050A10] hover:text-white">
                             Book Flight
                         </a>
 
@@ -103,9 +105,10 @@ export default function Header({
 
                     <div className="flex items-center gap-3">
                         <a
-                            href="#charter"
-                            className="hidden sm:inline-flex rounded-full bg-[#050A10] px-5 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-white transition-all hover:bg-[#B38E5D]"
-                        >
+                            href={WHATSAPP_LINK}
+                            target="_black"
+                            rel="noopener noreferrer"
+                            className="hidden sm:inline-flex rounded-full bg-[#050A10] px-5 py-2 font-mono text-xs font-semibold uppercase tracking-wider text-white transition-all hover:bg-[#8C6D3F]">
                             Book Flight
                         </a>
 
@@ -113,8 +116,7 @@ export default function Header({
                             type="button"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             className="inline-flex md:hidden items-center justify-center p-2 rounded-full text-[#050A10] hover:bg-black/5 focus:outline-none"
-                            aria-label="Toggle Navigation Menu"
-                        >
+                            aria-label="Toggle Navigation Menu">
                             {mobileMenuOpen ? (
                                 <X className="h-5 w-5 stroke-[1.75]" />
                             ) : (
@@ -141,8 +143,9 @@ export default function Header({
 
                             <div className="pt-3 border-t border-[#050A10]/10">
                                 <a
-                                    href="#charter"
-                                    onClick={() => setMobileMenuOpen(false)}
+                                    href={WHATSAPP_LINK}
+                                    target="_black"
+                                    rel="noopener noreferrer"
                                     className="flex items-center justify-center w-full rounded-full border-2 border-[#050A10] bg-[#050A10] text-white py-2.5 font-mono text-xs font-semibold uppercase tracking-wider transition-all hover:bg-transparent hover:text-[#050A10]"
                                 >
                                     Book Flight

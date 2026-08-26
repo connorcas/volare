@@ -41,7 +41,7 @@ const WhyVolare = () => {
                             The Pilot Difference
                         </div>
 
-                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal tracking-wide text-[#F4F1EA] leading-tight">
+                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wide text-[#F4F1EA] leading-tight">
                             Why Volare
                         </h2>
 

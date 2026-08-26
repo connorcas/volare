@@ -1,61 +1,101 @@
-"use client";
-
-import React, { useState } from "react";
 import UserLayout from "@/components/layouts/UserLayout";
-import {
-  Plane,
-  ChevronDown,
-  ChevronUp,
-  ArrowRight,
-  Plus,
-  X,
-  Sparkles,
-  Coffee,
-  ShieldCheck,
-  Clock,
-  Crown,
-} from "lucide-react";
 import BannerSection from "@/components/general-components/BannerSection";
+import { WHATSAPP_LINK } from "@/constants/common.constant";
+import Faq from "@/components/section-components/travel/Faq";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Luxury Travel Advisory & Virtuoso Hotel Bookings | Volare Aviation",
+  description:
+    "Bespoke international travel advisory, VIP Virtuoso hotel and resort bookings with complimentary upgrades, daily breakfast, and private jet charter coordination.",
+  keywords: [
+    "Luxury Travel Advisory",
+    "Virtuoso Travel Advisor",
+    "VIP Hotel Bookings",
+    "Private Jet Itinerary Planning",
+    "Fora Preferred Partner",
+    "Luxury Resort Upgrades",
+    "Bespoke Travel Planning USA",
+    "Worldwide Luxury Concierge",
+  ],
+  openGraph: {
+    title: "Luxury Travel Advisory & Virtuoso Perks | Volare Aviation",
+    description:
+      "Unlock room upgrades, resort credits, and complimentary breakfast at 175,000+ luxury hotels worldwide. Designed and coordinated with pilot expertise.",
+    url: "https://volareavi.com/travel",
+    siteName: "Volare Aviation",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "https://volareavi.com/images/hero-plan.png",
+        width: 1200,
+        height: 630,
+        alt: "Volare Aviation Luxury Travel Advisory",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Travel Advisory & VIP Virtuoso Bookings | Volare",
+    description:
+      "Global luxury hotel reservations with VIP amenities, charter coordination, and end-to-end trip planning at $0 added advisory cost.",
+    images: ["https://volareavi.com/images/hero-plan.png"],
+  },
+  alternates: {
+    canonical: "https://volareavi.com/travel",
+    languages: {
+      "x-default": "https://volareavi.com/travel"
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 export default function TravelSection() {
-  const [activeFaq, setActiveFaq] = useState<number | null>(2);
 
-  const navigationLinks = [
-    { name: "Home", href: "/" },
-    { name: "Travel", href: "/travel" },
-    { name: "Charter", href: "/charter" },
-    { name: "Pilot Services", href: "/pilot-services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-  ];
-
-  const perks = [
-    {
-      icon: <Sparkles className="h-5 w-5 text-[#B38E5D]" />,
-      title: "Room Upgrade",
-      detail: "On arrival, when available",
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    name: "Volare Aviation - Luxury Travel Advisory",
+    url: "https://volareavi.com/travel",
+    logo: "https://volareavi.com/logo.png",
+    image: "https://volareavi.com/images/hero-plan.png",
+    description:
+      "Virtuoso partner luxury hotel bookings, custom itinerary architecture, and charter flight coordination with direct pilot expertise.",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Worldwide",
     },
-    {
-      icon: <Coffee className="h-5 w-5 text-[#B38E5D]" />,
-      title: "Daily Breakfast",
-      detail: "For two, every morning",
-    },
-    {
-      icon: <ShieldCheck className="h-5 w-5 text-[#B38E5D]" />,
-      title: "Resort Credits",
-      detail: "Spa, dining & more",
-    },
-    {
-      icon: <Clock className="h-5 w-5 text-[#B38E5D]" />,
-      title: "Early Check-in",
-      detail: "Late check-out too",
-    },
-    {
-      icon: <Crown className="h-5 w-5 text-[#B38E5D]" />,
-      title: "VIP Treatment",
-      detail: "At 175,000+ hotels",
-    },
-  ];
+    makesOffer: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Virtuoso & Fora Preferred Hotel & Resort Booking",
+          description: "Complimentary room upgrades, daily breakfast for two, and $100+ resort credits at luxury hotels globally.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Full Itinerary Architecture & Trip Planning",
+          description: "End-to-end travel curation including private charter legs, ground transfers, and bespoke local experiences.",
+        },
+      },
+    ],
+    priceRange: "$$$$",
+  };
 
   const steps = [
     {
@@ -80,55 +120,13 @@ export default function TravelSection() {
     },
   ];
 
-  const propertyTags = [
-    "City Break",
-    "Luxury Hotel",
-    "London",
-    "Marriott Bonvoy",
-  ];
-
-  const reportInclusions = [
-    "+ Welcome amenity",
-    "· Daily breakfast",
-    "· Upgrade on arrival",
-    "· Extended checkout",
-  ];
-
-  const faqs = [
-    {
-      id: 0,
-      q: "Where to live?",
-      a: "Access to 175,000+ hotels through Virtuoso and Fora's preferred partner network, securing elite amenities at $0 advisory cost.",
-    },
-    {
-      id: 1,
-      q: "How do I issue a ticket refund?",
-      a: "Refunds, cancellations, and modifications are handled directly with your dedicated advisor and executed under priority partner terms.",
-    },
-    {
-      id: 2,
-      q: "What to take with you on vacation?",
-      a: "1. Passport and travel documents\n2. Money, credit card and travel insurance information\n3. Travel first aid kit and medicines that you need regularly\n4. Adapters and chargers",
-    },
-    {
-      id: 3,
-      q: "Do you have discounts for students & corporate groups?",
-      a: "Yes, bespoke corporate agreements, flight coordination packages, and seasonal partner rates are tailored per request.",
-    },
-    {
-      id: 4,
-      q: "How do I change the date of a ticket?",
-      a: "Tell Connor where you need to adjust and he'll manage the re-routing directly with airlines and properties.",
-    },
-    {
-      id: 5,
-      q: "Can I change my ticket?",
-      a: "Yes, flexible ticket modification and elite hotel booking terms apply depending on fare classes and Virtuoso partner conditions.",
-    },
-  ];
-
   return (
     <UserLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="min-h-screen pb-20 space-y-16 lg:space-y-24">
         <BannerSection
           slogan="Luxury Travel Advisory"
@@ -299,50 +297,17 @@ export default function TravelSection() {
                     </p>
                     <div className="flex justify-center lg:justify-start">
                       <a
-                        href="mailto:connor.casarella@volareavi.com"
-                        className="inline-flex items-center gap-2 rounded-full bg-[#C5A880] px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-[#070C14] hover:bg-white transition-all shadow-md"
-                      >
+                        href={WHATSAPP_LINK}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#C5A880] px-6 py-3 font-mono text-xs font-semibold uppercase tracking-wider text-[#070C14] hover:bg-white transition-all shadow-md">
                         <span>Ask Connor Directly</span>
                         <span className="text-sm">→</span>
                       </a>
                     </div>
                   </div>
                 </div>
-
-                <div className="lg:col-span-7 divide-y divide-[#C5A880]/15 border-y border-[#C5A880]/15">
-                  {faqs.map((faq) => {
-                    const isOpen = activeFaq === faq.id;
-                    return (
-                      <div key={faq.id} className="py-6 transition-colors">
-                        <button
-                          type="button"
-                          onClick={() => setActiveFaq(isOpen ? null : faq.id)}
-                          className="w-full flex items-start justify-between gap-6 text-left group"
-                        >
-                          <div className="flex items-start gap-4">
-                            <span className="font-mono text-xs font-semibold text-[#C5A880]/60 mt-1">
-                              0{faq.id + 1}
-                            </span>
-                            <span className="font-serif text-lg sm:text-xl font-normal text-[#F4F1EA] group-hover:text-[#C5A880] transition-colors leading-snug">
-                              {faq.q}
-                            </span>
-                          </div>
-                          <span className="shrink-0 mt-1 font-mono text-xl text-[#C5A880]">
-                            {isOpen ? "[ - ]" : "[ + ]"}
-                          </span>
-                        </button>
-
-                        {isOpen && (
-                          <div className="mt-4 pl-8 sm:pl-9 pr-4">
-                            <p className="font-sans text-xs sm:text-sm font-light text-slate-300 leading-relaxed whitespace-pre-line border-l border-[#C5A880]/30 pl-4">
-                              {faq.a}
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
-                </div>
+                <Faq />
               </div>
             </div>
           </section>

@@ -1,4 +1,5 @@
 import UserLayout from '@/components/layouts/UserLayout'
+import { WHATSAPP_LINK } from '@/constants/common.constant';
 import {
   Award,
   BookOpenText,
@@ -10,6 +11,67 @@ import {
   ShieldCheck,
   ArrowRight
 } from 'lucide-react'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About Captain Connor Casarella | Founder & Part 135 Pilot | Volare Aviation",
+  description:
+    "Meet Captain Connor Casarella, active Bombardier Global Part 135 airline transport pilot, NBAA CAM Candidate, and Virtuoso luxury travel advisor based at Dallas Love Field (DAL).",
+  keywords: [
+    "Captain Connor Casarella",
+    "Bombardier Global Captain",
+    "Part 135 Captain Dallas",
+    "Volare Aviation Founder",
+    "NBAA CAM Candidate",
+    "Dallas Love Field Pilot Association",
+    "Fora Certified Travel Advisor",
+    "Marquis Who's Who Aviation",
+  ],
+  openGraph: {
+    title: "About Captain Connor Casarella | Pilot & Advisor | Volare",
+    description:
+      "Active airline transport pilot and founder of Volare Aviation. Commanding international long-haul routes on the Bombardier Global with direct advisory expertise.",
+    url: "https://volareavi.com/about",
+    siteName: "Volare Aviation",
+    locale: "en_US",
+    type: "profile",
+    images: [
+      {
+        url: "https://volareavi.com/images/connorhs.jpg",
+        width: 800,
+        height: 1000,
+        alt: "Captain Connor Casarella - Founder of Volare Aviation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Captain Connor Casarella | Volare Aviation",
+    description:
+      "Built by someone who flies for a living. Part 135 flight command and Virtuoso luxury travel advisory.",
+    images: ["https://volareavi.com/images/connorhs.jpg"],
+  },
+  alternates: {
+    canonical: "https://volareavi.com/about",
+    languages: {
+      "x-default": "https://volareavi.com/about",
+      "en-US": "https://volareavi.com/en-us/about",
+      "en-CA": "https://volareavi.com/en-ca/about",
+      "en-GB": "https://volareavi.com/en-gb/about",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
 
 const credentials = [
   {
@@ -63,12 +125,59 @@ const credentials = [
 ];
 
 const AboutUs = () => {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Connor Casarella",
+    jobTitle: "Part 135 Captain & Founder",
+    worksFor: {
+      "@type": "AviationBusiness",
+      name: "Volare Aviation",
+      url: "https://volareavi.com",
+    },
+    url: "https://volareavi.com/about",
+    image: "https://volareavi.com/images/connorhs.jpg",
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Everglades University",
+      },
+      {
+        "@type": "EducationalOrganization",
+        name: "Aviator College",
+      },
+    ],
+    memberOf: [
+      {
+        "@type": "Organization",
+        name: "Love Field Pilots Association (LFPA)",
+      },
+      {
+        "@type": "Organization",
+        name: "National Business Aviation Association (NBAA)",
+      },
+    ],
+    award: "Marquis Who's Who in America",
+    description:
+      "Active airline transport pilot commanding Bombardier Global business jets, SMS safety committee member, and founder of Volare Aviation.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Dallas",
+      addressRegion: "TX",
+      addressCountry: "US",
+    },
+  };
+
   return (
     <UserLayout>
-      <div className="space-y-16 lg:space-y-24 pb-24">
+      <div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
 
-        <div className='px-4'>
-          <section className="p-4 rounded-xl">
+        <div className='px-2'>
+          <section className="p-4 md:p-12 rounded-2xl bg-white">
             <div className="mx-auto max-w-7xl">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
@@ -126,9 +235,10 @@ const AboutUs = () => {
 
                   <div className="pt-4 flex flex-col sm:flex-row sm:items-center gap-6">
                     <a
-                      href="mailto:connor.casarella@volareavi.com?subject=Inquiry%3A%20Connor%20Casarella"
-                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0A1628] px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#B38E5D] transition-colors"
-                    >
+                      href={WHATSAPP_LINK}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0A1628] px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#8C6D3F] transition-colors">
                       <span>Inquire Directly</span>
                       <ArrowRight className="h-3.5 w-3.5" />
                     </a>
@@ -137,14 +247,13 @@ const AboutUs = () => {
                     </span>
                   </div>
                 </div>
-
               </div>
             </div>
           </section>
         </div>
 
-        <section className="px-4">
-          <div className="relative overflow-hidden rounded-xl bg-[#0A1628] text-[#F4F1EA] border border-[#C5A880]/20 p-10 sm:p-16 lg:p-20 shadow-2xl">
+        <section className="px-2 mt-4">
+          <div className="relative overflow-hidden rounded-xl bg-[#0A1628] text-[#F4F1EA] border border-[#C5A880]/20 p-10 sm:p-16 lg:p-20">
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#C5A88015_1px,transparent_1px),linear-gradient(to_bottom,#C5A88015_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_75%_75%_at_50%_50%,#000_40%,transparent_100%)] pointer-events-none" />
             <div className="absolute top-1/2 left-1/2 h-[350px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#C5A880]/10 blur-[130px] pointer-events-none" />
             <div className="relative z-10 text-center space-y-6 max-w-4xl mx-auto">
@@ -161,7 +270,7 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-4 space-y-12">
+        <section className="mx-auto max-w-7xl px-4 space-y-12 mt-20">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#8C6D3F]">
               Professional Architecture
