@@ -64,10 +64,10 @@ export default function Footer({
                             <div>
                                 <span className="block text-slate-500 uppercase text-[9px]">Direct Contact</span>
                                 <a
-                                    href="mailto:connor.casarella@volareavi.com"
+                                    href="mailto:Connor.Casarella@VolareAvi.com"
                                     className="font-sans text-sm text-[#F4F1EA] hover:text-[#C5A880] transition-colors"
                                 >
-                                    connor.casarella@volareavi.com
+                                    Connor.Casarella@VolareAvi.com
                                 </a>
                             </div>
 

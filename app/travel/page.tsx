@@ -285,7 +285,7 @@ export default function TravelSection() {
                   <div className="text-center lg:text-left space-y-4">
                     <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#F4F1EA] leading-tight">
                       Frequently <br className="hidden lg:inline" />
-                      <span className="italic font-normal text-[#C5A880]">asked questions</span>
+                      <span className="italic font-semibold text-[#C5A880]">asked questions</span>
                     </h2>
                     <p className="font-sans text-xs sm:text-sm text-slate-300 font-light leading-relaxed max-w-xl mx-auto lg:mx-0">
                       Everything you need to know about our preferred booking rates, routing advisory, and itinerary changes.

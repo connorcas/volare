@@ -126,7 +126,7 @@ export default function PilotServicesPage() {
   const credentials = [
     {
       role: "Current Flight Command",
-      title: "Bombardier Global XRS",
+      title: "Bombardier Global 7500",
       sub: "Part 135 Captain · Solairus Aviation",
       detail: "Active worldwide flight operations on ultra-long-range large-cabin business jets.",
       icon: <Plane className="h-4 w-4 text-[#8C6D3F]" />,
@@ -218,7 +218,7 @@ export default function PilotServicesPage() {
 
             <div className="lg:col-span-7 space-y-4 font-sans text-sm sm:text-[15px] text-[#4A5568] font-light leading-relaxed text-left border-l-0 lg:border-l lg:border-[#D6CEBF] lg:pl-10">
               <p>
-                Connor flies the Bombardier Global XRS internationally for Solairus Aviation under Part 135 — one of the most demanding positions in business aviation. On days off, he is available to select operators requiring a typed, experienced, and safety-minded captain or first officer for contract assignments.
+                Connor flies the Bombardier Global 7500 internationally for Solairus Aviation under Part 135 — one of the most demanding positions in business aviation. On days off, he is available to select operators requiring a typed, experienced, and safety-minded captain or first officer for contract assignments.
               </p>
               <p>
                 His work on Solairus&apos;s safety committee — combined with his NBAA CAM candidacy — means he brings a management-level perspective beyond the flight deck.

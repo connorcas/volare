@@ -5,7 +5,7 @@ const CredentialsSection = () => {
         {
             title: "Part 135 Captain",
             category: "Commercial Aviation",
-            detail: "FAA Certified Command Authority",
+            detail: "FAA Airline Transport Pilot Certificate",
             icon: <ShieldCheck className="h-5 w-5 text-[#C5A880]" />,
         },
         {

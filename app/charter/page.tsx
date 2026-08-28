@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Private Jet Charter & Fleet Brokerage | Volare Aviation",
     description:
-      "Curated by a working captain. Light, midsize, heavy, and ultra-long-range jet charter with zero broker markups.",
+      "Curated by a working captain. Light, midsize, heavy, and ultra-long-range jet charter with clear pricing with no hidden charges.",
     images: ["https://volareavi.com/images/hero-plan.png"],
   },
   alternates: {
@@ -147,7 +147,7 @@ export default function Charter() {
     },
     {
       badge: "Vetted",
-      desc: "Only operators Connor flies under",
+      desc: "Only properly certificated Part 135 operators that meet Volare’s safety, service, and mission-specific review standards.",
       icon: <CheckCircle2 className="h-5 w-5 text-[#B38E5D]" />,
     },
   ];
@@ -212,7 +212,8 @@ export default function Charter() {
   ];
 
   return (
-    <UserLayout>
+    <UserLayout
+      footerPara="Volare Aviation Services LLC acts as an air charter broker and is not a direct air carrier. Volare does not own or operate charter aircraft and does not exercise operational control over charter flights. All flights are operated by appropriately licensed direct air carriers that retain full operational control.">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -334,7 +335,7 @@ export default function Charter() {
                     </div>
 
                     <a
-                      href={`mailto:connor.casarella@volareavi.com?subject=Quote%20Request%3A%20${encodeURIComponent(aircraft.category)}`}
+                      href={`mailto:Connor.Casarella@VolareAvi.com?subject=Quote%20Request%3A%20${encodeURIComponent(aircraft.category)}`}
                       className={`inline-flex items-center justify-center gap-2 w-full rounded-full py-3 font-mono text-xs font-semibold uppercase tracking-wider transition-all ${isSelected
                         ? "bg-[#C5A880] text-[#0A1628] hover:bg-white"
                         : "bg-[#0A1628] text-white hover:bg-[#B38E5D]"

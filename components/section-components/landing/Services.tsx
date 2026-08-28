@@ -21,7 +21,7 @@ export default function Services() {
             title: "Private Jet Charter",
             subtitle: "Part 135 Worldwide Aircraft Sourcing",
             description:
-                "Direct access to top-tier heavy, super-mid, and light aircraft. Every flight is audited for airframe pedigree, operator safety records, and crew duty limits with absolute transparency and zero broker markups.",
+                "Direct access to top-tier heavy, super-mid, and light aircraft. Every flight is audited for airframe pedigree, operator safety records, and crew duty limits with absolute transparency and clear pricing with no hidden charges.",
             icon: <Plane className="h-4 w-4 text-[#8C6D3F]" />,
             image: "/images/hero-plan.png",
             href: "/charter",

@@ -9,9 +9,13 @@ import { WHATSAPP_LINK } from "@/constants/common.constant";
 
 interface UserLayoutProps {
     children: React.ReactNode;
+    footerPara?: String;
 }
 
-const UserLayout = ({ children }: UserLayoutProps) => {
+const UserLayout = ({
+    children,
+    footerPara = "Whether dispatched for private jet charters or Virtuoso luxury travel advisory, receive direct flight logistics tailored to your exact schedule."
+}: UserLayoutProps) => {
     const [showScrollTop, setShowScrollTop] = useState(false);
 
     useEffect(() => {
@@ -56,12 +60,12 @@ const UserLayout = ({ children }: UserLayoutProps) => {
                             </h2>
 
                             <p className="mt-4 font-sans text-xs sm:text-sm text-slate-600 font-light leading-relaxed max-w-xl mx-auto">
-                                Whether dispatched for private jet charters or Virtuoso luxury travel advisory, receive direct flight logistics tailored to your exact schedule.
+                                {footerPara}
                             </p>
 
                             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
                                 <a
-                                    href="mailto:connor.casarella@volareavi.com"
+                                    href="mailto:Connor.Casarella@VolareAvi.com"
                                     className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 rounded-full bg-[#0A1628] px-8 py-4 font-sans text-xs font-semibold uppercase tracking-widest text-[#F4F1EA] transition-all duration-300 hover:bg-[#8C6D3F] hover:shadow-lg hover:shadow-[#C5A880]/20"
                                 >
                                     <Mail className="h-4 w-4 text-[#C5A880] group-hover:text-white transition-colors" />
@@ -71,7 +75,7 @@ const UserLayout = ({ children }: UserLayoutProps) => {
 
                                 <a
                                     href={WHATSAPP_LINK}
-                                    target="_black"
+                                    target="_blank"
                                     rel="noopener noreferrer"
                                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-[#0A1628] bg-white/80 px-8 py-4 font-sans text-xs font-semibold uppercase tracking-widest text-[#0A1628] backdrop-blur-md transition-all duration-300 hover:bg-[#0A1628] hover:text-[#F4F1EA]"
                                 >

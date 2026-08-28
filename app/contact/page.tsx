@@ -75,7 +75,7 @@ export default function ContactUs() {
       "@type": "AviationBusiness",
       name: "Volare Aviation",
       telephone: "+1-214-000-0000",
-      email: "connor.casarella@volareavi.com",
+      email: "Connor.Casarella@VolareAvi.com",
       url: "https://volareavi.com",
       address: {
         "@type": "PostalAddress",
@@ -88,7 +88,7 @@ export default function ContactUs() {
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "Flight Operations & Charter Desk",
-        email: "connor.casarella@volareavi.com",
+        email: "Connor.Casarella@VolareAvi.com",
         availableLanguage: ["English"],
         areaServed: "Worldwide",
       },
@@ -105,8 +105,8 @@ export default function ContactUs() {
       <div className="min-h-screen text-[#0A1628]">
         <BannerSection
           slogan="Direct Flight Operations & Travel Desk"
-          title={"Initiate Your,"}
-          italicTitle={"Next Engagement."}
+          title={"Tell Us About Your"}
+          italicTitle={"Next Trip."}
           subTitle={"Direct dispatch to Captain Connor Casarella. Inquiries receive pilot-level operational review, rigorous operator vetting, and curated luxury access."}
         />
 
@@ -137,12 +137,12 @@ export default function ContactUs() {
 
                 <div className="divide-y divide-[#D6CEBF] border-y border-[#D6CEBF] font-mono text-xs text-slate-600">
                   <div className="py-2.5 flex justify-between">
-                    <span className="text-gray-600">Direct Line</span>
+                    <span className="text-gray-600">Direct Email</span>
                     <a
-                      href="mailto:connor.casarella@volareavi.com"
+                      href="mailto:Connor.Casarella@VolareAvi.com"
                       className="text-[#0A1628] font-medium hover:text-[#B38E5D] transition-colors"
                     >
-                      connor.casarella@volareavi.com
+                      Connor.Casarella@VolareAvi.com
                     </a>
                   </div>
                   <div className="py-2.5 flex justify-between">
