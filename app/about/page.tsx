@@ -54,10 +54,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://volareavi.com/about",
     languages: {
-      "x-default": "https://volareavi.com/about",
-      "en-US": "https://volareavi.com/en-us/about",
-      "en-CA": "https://volareavi.com/en-ca/about",
-      "en-GB": "https://volareavi.com/en-gb/about",
+      "x-default": "https://volareavi.com/about"
     },
   },
   robots: {

@@ -49,10 +49,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://volareavi.com/pilot-services",
     languages: {
-      "x-default": "https://volareavi.com/pilot-services",
-      "en-US": "https://volareavi.com/en-us/pilot-services",
-      "en-CA": "https://volareavi.com/en-ca/pilot-services",
-      "en-GB": "https://volareavi.com/en-gb/pilot-services",
+      "x-default": "https://volareavi.com/pilot-services"
     },
   },
   robots: {

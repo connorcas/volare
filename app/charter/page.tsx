@@ -51,10 +51,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://volareavi.com/charter",
     languages: {
-      "x-default": "https://volareavi.com/charter",
-      "en-US": "https://volareavi.com/en-us/charter",
-      "en-CA": "https://volareavi.com/en-ca/charter",
-      "en-GB": "https://volareavi.com/en-gb/charter",
+      "x-default": "https://volareavi.com/charter"
     },
   },
   robots: {

@@ -1,25 +1,25 @@
+import { Metadata } from "next";
+import { Mail, MessageSquare, ArrowRight } from "lucide-react";
 import UserLayout from "@/components/layouts/UserLayout";
 import BannerSection from "@/components/general-components/BannerSection";
-import ContactForm from "@/components/section-components/contact/ContactForm";
-import { Metadata } from "next";
+import { WHATSAPP_LINK } from "@/constants/common.constant";
 
 export const metadata: Metadata = {
   title: "Contact Flight Operations & Advisory Desk | Volare Aviation",
   description:
-    "Direct dispatch to Captain Connor Casarella. Request private jet charter proposals, contract pilot availability, and luxury Virtuoso travel itineraries.",
+    "Direct dispatch to Captain Connor Casarella via email or WhatsApp. Request private jet charter proposals, contract pilot availability, and luxury Virtuoso travel itineraries.",
   keywords: [
     "Contact Volare Aviation",
-    "Private Jet Charter Quote",
+    "Private Jet Charter WhatsApp",
     "Captain Connor Casarella Contact",
     "Dallas Love Field Aviation Desk",
     "Contract Pilot Inquiry",
     "Aviation Advisory Contact",
-    "Luxury Travel Desk Inquiries",
   ],
   openGraph: {
     title: "Contact Volare Aviation | Direct Flight Operations Desk",
     description:
-      "Direct dispatch to Captain Connor Casarella. Pilot-level review, Part 135 airframe vetting, and luxury travel advisory requests.",
+      "Direct dispatch to Captain Connor Casarella. Inquiries receive pilot-level operational review and rapid turnaround.",
     url: "https://volareavi.com/contact",
     siteName: "Volare Aviation",
     locale: "en_US",
@@ -37,16 +37,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Flight Operations Desk | Volare Aviation",
     description:
-      "Direct dispatch to Captain Connor Casarella. 2-4 hour turnaround for private jet charters and luxury travel advisory.",
+      "Direct dispatch to Captain Connor Casarella via WhatsApp and Email. 2-4 hour turnaround.",
     images: ["https://volareavi.com/images/hero-plan.png"],
   },
   alternates: {
     canonical: "https://volareavi.com/contact",
     languages: {
-      "x-default": "https://volareavi.com/contact",
-      "en-US": "https://volareavi.com/en-us/contact",
-      "en-CA": "https://volareavi.com/en-ca/contact",
-      "en-GB": "https://volareavi.com/en-gb/contact",
+      "x-default": "https://volareavi.com/contact"
     },
   },
   robots: {
@@ -63,18 +60,16 @@ export const metadata: Metadata = {
 };
 
 export default function ContactUs() {
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Contact Volare Aviation",
     url: "https://volareavi.com/contact",
     description:
-      "Contact Volare Aviation and Captain Connor Casarella for private jet charter inquiries, contract flight crew, and luxury travel itinerary coordination.",
+      "Direct communication channels for charter quotes, flight ops, and luxury itinerary planning with Captain Connor Casarella.",
     mainEntity: {
       "@type": "AviationBusiness",
       name: "Volare Aviation",
-      telephone: "+1-214-000-0000",
       email: "Connor.Casarella@VolareAvi.com",
       url: "https://volareavi.com",
       address: {
@@ -87,7 +82,7 @@ export default function ContactUs() {
       },
       contactPoint: {
         "@type": "ContactPoint",
-        contactType: "Flight Operations & Charter Desk",
+        contactType: "Direct Flight Desk",
         email: "Connor.Casarella@VolareAvi.com",
         availableLanguage: ["English"],
         areaServed: "Worldwide",
@@ -113,7 +108,8 @@ export default function ContactUs() {
         <section className="mx-auto max-w-5xl px-4 py-16 sm:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
 
-            <div className="lg:col-span-4 space-y-3">
+            {/* Left Profile Section */}
+            <div className="lg:col-span-5 space-y-4">
               <div className="aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-[#D6CEBF] bg-[#F0EBE1]">
                 <img
                   src="/images/connorhs.jpg"
@@ -161,9 +157,42 @@ export default function ContactUs() {
               </div>
             </div>
 
-            <div className="lg:col-span-8">
-              <ContactForm />
+            {/* Right Simple Contact Buttons */}
+            <div className="lg:col-span-7 space-y-6 pt-2">
+              <div className="space-y-3">
+                <span className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-[#8C6D3F]">
+                  Direct Dispatch
+                </span>
+                <h2 className="font-serif text-3xl sm:text-4xl font-semibold text-[#0A1628]">
+                  Start a conversation.
+                </h2>
+                <p className="font-sans text-sm text-slate-600 font-light leading-relaxed">
+                  Reach out directly for charter quotes, contract crew coverage, or luxury hotel bookings. Every inquiry goes straight to Connor.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0A1628] px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-white hover:bg-[#8C6D3F] transition-colors shadow-sm"
+                >
+                  <MessageSquare className="h-4 w-4 text-[#C5A880]" />
+                  <span>Chat on WhatsApp</span>
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+
+                <a
+                  href="mailto:Connor.Casarella@VolareAvi.com"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-[#D6CEBF] bg-white px-8 py-3.5 font-mono text-xs font-semibold uppercase tracking-wider text-[#0A1628] hover:border-[#8C6D3F] transition-colors shadow-sm"
+                >
+                  <Mail className="h-4 w-4 text-[#8C6D3F]" />
+                  <span>Send Direct Email</span>
+                </a>
+              </div>
             </div>
+
           </div>
         </section>
 
