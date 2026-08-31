@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         title: "Privacy Policy | Volare Aviation Services LLC",
         description:
             "Comprehensive Privacy Policy detailing data collection, security, and passenger confidentiality for Volare Aviation Services LLC.",
-        url: "https://volareavi.com/privacy-policy",
+        url: "https://www.volareavi.com/privacy-policy",
         siteName: "Volare Aviation",
         locale: "en_US",
         type: "website",
         images: [
             {
-                url: "https://volareavi.com/images/hero-plan.png",
+                url: "https://www.volareavi.com/images/hero-plan.png",
                 width: 1200,
                 height: 630,
                 alt: "Volare Aviation Services Privacy Policy",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
         title: "Privacy Policy | Volare Aviation Services LLC",
         description:
             "Official Privacy Policy and data protection standards for Volare Aviation Services LLC.",
-        images: ["https://volareavi.com/images/hero-plan.png"],
+        images: ["https://www.volareavi.com/images/hero-plan.png"],
     },
     alternates: {
-        canonical: "https://volareavi.com/privacy-policy",
+        canonical: "https://www.volareavi.com/privacy-policy",
     },
     robots: {
         index: true,
@@ -80,7 +80,7 @@ export default function PrivacyPolicy() {
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: "Privacy Policy | Volare Aviation Services LLC",
-        url: "https://volareavi.com/privacy-policy",
+        url: "https://www.volareavi.com/privacy-policy",
         description:
             "Privacy Policy for Volare Aviation Services LLC outlining passenger data collection, SMS preferences, and global privacy standards.",
         datePublished: "2026-08-24",
@@ -88,8 +88,8 @@ export default function PrivacyPolicy() {
         publisher: {
             "@type": "Organization",
             name: "Volare Aviation Services LLC",
-            url: "https://volareavi.com",
-            logo: "https://volareavi.com/logo.png",
+            url: "https://www.volareavi.com",
+            logo: "https://www.volareavi.com/logo.png",
         },
     };
 

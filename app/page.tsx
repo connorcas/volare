@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     title: "Volare Aviation | Worldwide Private Jet Charter & Pilot Advisory",
     description:
       "Direct Part 135 international flight command and luxury travel advisory orchestrated by an active Bombardier Global Captain across global routes.",
-    url: "https://volareavi.com",
+    url: "https://www.volareavi.com",
     siteName: "Volare Aviation",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://volareavi.com/images/hero-plan.png",
+        url: "https://www.volareavi.com/images/hero-plan.png",
         width: 1200,
         height: 630,
         alt: "Volare Aviation Worldwide Private Jet Charter",
@@ -44,12 +44,12 @@ export const metadata: Metadata = {
     title: "Volare Aviation | Pilot-Led Global Jet Charter & Advisory",
     description:
       "Bespoke private jet charter, Part 135 safety auditing, and Virtuoso travel logistics across international and transatlantic destinations.",
-    images: ["https://volareavi.com/images/hero-plan.png"],
+    images: ["https://www.volareavi.com/images/hero-plan.png"],
   },
   alternates: {
-    canonical: "https://volareavi.com",
+    canonical: "https://www.volareavi.com",
     languages: {
-      "x-default": "https://volareavi.com"
+      "x-default": "https://www.volareavi.com"
     },
   },
   robots: {
@@ -70,9 +70,9 @@ export default function Page() {
     "@context": "https://schema.org",
     "@type": "AviationBusiness",
     name: "Volare Aviation",
-    url: "https://volareavi.com",
-    logo: "https://volareavi.com/logo.png",
-    image: "https://volareavi.com/images/hero-plan.png",
+    url: "https://www.volareavi.com",
+    logo: "https://www.volareavi.com/logo.png",
+    image: "https://www.volareavi.com/images/hero-plan.png",
     description:
       "Worldwide private jet charter, contract pilot solutions, and executive aviation advisory commanded by Captain Connor Casarella across global routes.",
     areaServed: {

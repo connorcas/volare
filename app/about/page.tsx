@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     title: "About Captain Connor Casarella | Pilot & Advisor | Volare",
     description:
       "Active airline transport pilot and founder of Volare Aviation. Commanding international long-haul routes on the Bombardier Global with direct advisory expertise.",
-    url: "https://volareavi.com/about",
+    url: "https://www.volareavi.com/about",
     siteName: "Volare Aviation",
     locale: "en_US",
     type: "profile",
     images: [
       {
-        url: "https://volareavi.com/images/connorhs.jpg",
+        url: "https://www.volareavi.com/images/connorhs.jpg",
         width: 800,
         height: 1000,
         alt: "Captain Connor Casarella - Founder of Volare Aviation",
@@ -49,12 +49,12 @@ export const metadata: Metadata = {
     title: "About Captain Connor Casarella | Volare Aviation",
     description:
       "Built by someone who flies for a living. Part 135 flight command and Virtuoso luxury travel advisory.",
-    images: ["https://volareavi.com/images/connorhs.jpg"],
+    images: ["https://www.volareavi.com/images/connorhs.jpg"],
   },
   alternates: {
-    canonical: "https://volareavi.com/about",
+    canonical: "https://www.volareavi.com/about",
     languages: {
-      "x-default": "https://volareavi.com/about"
+      "x-default": "https://www.volareavi.com/about"
     },
   },
   robots: {
@@ -130,10 +130,10 @@ const AboutUs = () => {
     worksFor: {
       "@type": "AviationBusiness",
       name: "Volare Aviation",
-      url: "https://volareavi.com",
+      url: "https://www.volareavi.com",
     },
-    url: "https://volareavi.com/about",
-    image: "https://volareavi.com/images/connorhs.jpg",
+    url: "https://www.volareavi.com/about",
+    image: "https://www.volareavi.com/images/connorhs.jpg",
     alumniOf: [
       {
         "@type": "CollegeOrUniversity",

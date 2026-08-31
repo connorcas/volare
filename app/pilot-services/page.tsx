@@ -26,13 +26,13 @@ export const metadata: Metadata = {
     title: "Contract Pilot & Aviation Consulting | Volare Aviation",
     description:
       "Typed Bombardier Global PIC/SIC coverage, international trip support, and SMS operations consulting by active Part 135 airline transport command.",
-    url: "https://volareavi.com/pilot-services",
+    url: "https://www.volareavi.com/pilot-services",
     siteName: "Volare Aviation",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://volareavi.com/images/hero-plan.png",
+        url: "https://www.volareavi.com/images/hero-plan.png",
         width: 1200,
         height: 630,
         alt: "Volare Aviation Contract Pilot & Consulting Services",
@@ -44,12 +44,12 @@ export const metadata: Metadata = {
     title: "Contract Pilot, Crew & Consulting | Volare Aviation",
     description:
       "Professional typed captain coverage, DAL flight crew placement, and flight department advisory.",
-    images: ["https://volareavi.com/images/hero-plan.png"],
+    images: ["https://www.volareavi.com/images/hero-plan.png"],
   },
   alternates: {
-    canonical: "https://volareavi.com/pilot-services",
+    canonical: "https://www.volareavi.com/pilot-services",
     languages: {
-      "x-default": "https://volareavi.com/pilot-services"
+      "x-default": "https://www.volareavi.com/pilot-services"
     },
   },
   robots: {
@@ -71,9 +71,9 @@ export default function PilotServicesPage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     name: "Volare Aviation - Contract Pilot & Consulting",
-    url: "https://volareavi.com/pilot-services",
-    logo: "https://volareavi.com/logo.png",
-    image: "https://volareavi.com/images/hero-plan.png",
+    url: "https://www.volareavi.com/pilot-services",
+    logo: "https://www.volareavi.com/logo.png",
+    image: "https://www.volareavi.com/images/hero-plan.png",
     description:
       "Professional typed contract captain, relief first officer, trip logistics coordination, and Part 135 SMS flight department advisory.",
     areaServed: {

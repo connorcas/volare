@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     title: "Luxury Travel Advisory & Virtuoso Perks | Volare Aviation",
     description:
       "Unlock room upgrades, resort credits, and complimentary breakfast at 175,000+ luxury hotels worldwide. Designed and coordinated with pilot expertise.",
-    url: "https://volareavi.com/travel",
+    url: "https://www.volareavi.com/travel",
     siteName: "Volare Aviation",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://volareavi.com/images/hero-plan.png",
+        url: "https://www.volareavi.com/images/hero-plan.png",
         width: 1200,
         height: 630,
         alt: "Volare Aviation Luxury Travel Advisory",
@@ -40,12 +40,12 @@ export const metadata: Metadata = {
     title: "Luxury Travel Advisory & VIP Virtuoso Bookings | Volare",
     description:
       "Global luxury hotel reservations with VIP amenities, charter coordination, and end-to-end trip planning at $0 added advisory cost.",
-    images: ["https://volareavi.com/images/hero-plan.png"],
+    images: ["https://www.volareavi.com/images/hero-plan.png"],
   },
   alternates: {
-    canonical: "https://volareavi.com/travel",
+    canonical: "https://www.volareavi.com/travel",
     languages: {
-      "x-default": "https://volareavi.com/travel"
+      "x-default": "https://www.volareavi.com/travel"
     },
   },
   robots: {
@@ -67,9 +67,9 @@ export default function TravelSection() {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     name: "Volare Aviation - Luxury Travel Advisory",
-    url: "https://volareavi.com/travel",
-    logo: "https://volareavi.com/logo.png",
-    image: "https://volareavi.com/images/hero-plan.png",
+    url: "https://www.volareavi.com/travel",
+    logo: "https://www.volareavi.com/logo.png",
+    image: "https://www.volareavi.com/images/hero-plan.png",
     description:
       "Virtuoso partner luxury hotel bookings, custom itinerary architecture, and charter flight coordination with direct pilot expertise.",
     areaServed: {

@@ -20,13 +20,13 @@ export const metadata: Metadata = {
     title: "Contact Volare Aviation | Direct Flight Operations Desk",
     description:
       "Direct dispatch to Captain Connor Casarella. Inquiries receive pilot-level operational review and rapid turnaround.",
-    url: "https://volareavi.com/contact",
+    url: "https://www.volareavi.com/contact",
     siteName: "Volare Aviation",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://volareavi.com/images/hero-plan.png",
+        url: "https://www.volareavi.com/images/hero-plan.png",
         width: 1200,
         height: 630,
         alt: "Volare Aviation Contact Flight Operations",
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
     title: "Contact Flight Operations Desk | Volare Aviation",
     description:
       "Direct dispatch to Captain Connor Casarella via WhatsApp and Email. 2-4 hour turnaround.",
-    images: ["https://volareavi.com/images/hero-plan.png"],
+    images: ["https://www.volareavi.com/images/hero-plan.png"],
   },
   alternates: {
-    canonical: "https://volareavi.com/contact",
+    canonical: "https://www.volareavi.com/contact",
     languages: {
-      "x-default": "https://volareavi.com/contact"
+      "x-default": "https://www.volareavi.com/contact"
     },
   },
   robots: {
@@ -64,14 +64,14 @@ export default function ContactUs() {
     "@context": "https://schema.org",
     "@type": "ContactPage",
     name: "Contact Volare Aviation",
-    url: "https://volareavi.com/contact",
+    url: "https://www.volareavi.com/contact",
     description:
       "Direct communication channels for charter quotes, flight ops, and luxury itinerary planning with Captain Connor Casarella.",
     mainEntity: {
       "@type": "AviationBusiness",
       name: "Volare Aviation",
       email: "Connor.Casarella@VolareAvi.com",
-      url: "https://volareavi.com",
+      url: "https://www.volareavi.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Dallas Love Field (DAL)",

@@ -28,13 +28,13 @@ export const metadata: Metadata = {
     title: "On-Demand Private Jet Charter | Volare Aviation",
     description:
       "Vetted Part 135 private jet charter and international flight brokerage commanded by an active airline transport pilot.",
-    url: "https://volareavi.com/charter",
+    url: "https://www.volareavi.com/charter",
     siteName: "Volare Aviation",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://volareavi.com/images/hero-plan.png",
+        url: "https://www.volareavi.com/images/hero-plan.png",
         width: 1200,
         height: 630,
         alt: "Volare Aviation Private Jet Fleet Charter",
@@ -46,12 +46,12 @@ export const metadata: Metadata = {
     title: "Private Jet Charter & Fleet Brokerage | Volare Aviation",
     description:
       "Curated by a working captain. Light, midsize, heavy, and ultra-long-range jet charter with clear pricing with no hidden charges.",
-    images: ["https://volareavi.com/images/hero-plan.png"],
+    images: ["https://www.volareavi.com/images/hero-plan.png"],
   },
   alternates: {
-    canonical: "https://volareavi.com/charter",
+    canonical: "https://www.volareavi.com/charter",
     languages: {
-      "x-default": "https://volareavi.com/charter"
+      "x-default": "https://www.volareavi.com/charter"
     },
   },
   robots: {
@@ -76,10 +76,10 @@ export default function Charter() {
     provider: {
       "@type": "AviationBusiness",
       name: "Volare Aviation",
-      url: "https://volareavi.com",
-      image: "https://volareavi.com/images/hero-plan.png",
+      url: "https://www.volareavi.com",
+      image: "https://www.volareavi.com/images/hero-plan.png",
     },
-    url: "https://volareavi.com/charter",
+    url: "https://www.volareavi.com/charter",
     description:
       "On-demand private jet charter, group charter, empty leg positioning, and international flight routing with Part 135 safety auditing.",
     areaServed: {

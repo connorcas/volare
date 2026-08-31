@@ -16,13 +16,13 @@ export const metadata: Metadata = {
         title: "Terms & Conditions | Volare Aviation Services LLC",
         description:
             "General legal terms, air charter brokerage disclosures, and user responsibilities for Volare Aviation Services LLC.",
-        url: "https://volareavi.com/terms",
+        url: "https://www.volareavi.com/terms-and-conditions",
         siteName: "Volare Aviation",
         locale: "en_US",
         type: "website",
         images: [
             {
-                url: "https://volareavi.com/images/hero-plan.png",
+                url: "https://www.volareavi.com/images/hero-plan.png",
                 width: 1200,
                 height: 630,
                 alt: "Volare Aviation Terms and Conditions",
@@ -34,10 +34,10 @@ export const metadata: Metadata = {
         title: "Terms & Conditions | Volare Aviation Services LLC",
         description:
             "Terms and conditions governing private aircraft brokerage and travel services by Volare Aviation Services LLC.",
-        images: ["https://volareavi.com/images/hero-plan.png"],
+        images: ["https://www.volareavi.com/images/hero-plan.png"],
     },
     alternates: {
-        canonical: "https://volareavi.com/terms",
+        canonical: "https://www.volareavi.com/terms-and-conditions",
     },
     robots: {
         index: true,
@@ -89,7 +89,7 @@ export default function TermsAndConditions() {
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: "Terms and Conditions | Volare Aviation Services LLC",
-        url: "https://volareavi.com/terms",
+        url: "https://www.volareavi.com/terms-and-conditions",
         description:
             "Terms of service, flight brokerage conditions, and legal disclosures for Volare Aviation Services LLC.",
         datePublished: "2026-08-24",
@@ -97,8 +97,8 @@ export default function TermsAndConditions() {
         publisher: {
             "@type": "Organization",
             name: "Volare Aviation Services LLC",
-            url: "https://volareavi.com",
-            logo: "https://volareavi.com/logo.png",
+            url: "https://www.volareavi.com",
+            logo: "https://www.volareavi.com/logo.png",
         },
     };
 
