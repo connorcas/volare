@@ -1,0 +1,21 @@
+# Volare Aviation
+
+> Private aviation advisory, bespoke air charter brokerage, professional pilot staffing, and luxury travel coordination.
+
+## Organization
+- Name: Volare Aviation
+- Website: https://www.volareavi.com
+- Industry: Private Aviation & Air Charter Services
+- Primary Services: Aircraft Charter, Pilot Services, Curated Travel Coordination
+
+## Main Pages
+- [Home](https://www.volareavi.com): Overview of Volare Aviation, core mission, and private flight capabilities.
+- [Travel](https://www.volareavi.com/travel): End-to-end luxury travel planning, itinerary management, and bespoke hospitality coordination.
+- [Charter](https://www.volareavi.com/charter): Private aircraft charter booking, fleet access, route planning, and on-demand flight advisory.
+- [Pilot Services](https://www.volareavi.com/pilot-services): Professional flight crew staffing, contract pilot solutions, and Part 91/135 operational support.
+- [About](https://www.volareavi.com/about): Brand background, leadership credentials, aviation standards, and safety philosophy.
+- [Contact](https://www.volareavi.com/contact): Flight inquiry forms, direct contact information, and charter consultation requests.
+
+## Legal & Compliance
+- [Privacy Policy](https://www.volareavi.com/privacy-policy): Information on user data handling, security, and privacy practices.
+- [Terms and Conditions](https://www.volareavi.com/terms-and-conditions): Terms of service, charter terms, operational disclaimers, and legal agreements.
